@@ -60,7 +60,7 @@ The Payout Audit Report displays only a tabular grid, in which each row represen
 
 * **Zip Code** – The zip code of the customer.
 
-* **Channel Name** – The name of the app.
+* **App Name** – The name of the app.
 
 * **Product Code** –The product identifier as entered on the Developer Dashboard when the product was created.
 

@@ -18,7 +18,7 @@ The Animation node class provides a simple linear interpolator function, where t
 
 ### Example
 
-<Anchor label="Animation Markup" title="Animation Markup" href="https://github.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/PosterGridExampleanimation-markup.md">Animation Markup</Anchor> in the <Anchor label="SceneGraph Samples" title="SceneGraph Samples" href="https://github.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/PosterGridExampleoverview.md">SceneGraph Samples</Anchor> provides several simple examples of Animation node definitions that use all of the field interpolator nodes. Other simple examples of using the field interpolators can be found in the [FloatFieldInterpolator](doc:floatfieldinterpolator), [Vector2DFieldInterpolator](doc:vector2dfieldinterpolator), and [ColorFieldInterpolator](doc:colorfieldinterpolator).
+<Anchor label="Animation Markup" title="Animation Markup" href="https://gitlab.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/PosterGridExampleanimation-markup.md">Animation Markup</Anchor> in the <Anchor label="SceneGraph Samples" title="SceneGraph Samples" href="https://gitlab.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/PosterGridExampleoverview.md">SceneGraph Samples</Anchor> provides several simple examples of Animation node definitions that use all of the field interpolator nodes. Other simple examples of using the field interpolators can be found in the [FloatFieldInterpolator](doc:floatfieldinterpolator), [Vector2DFieldInterpolator](doc:vector2dfieldinterpolator), and [ColorFieldInterpolator](doc:colorfieldinterpolator).
 
 The following example shows how to use some simple animations. It uses two Animation nodes, each with its own Vector2DFieldInterpolator. The first defines a translation animation of the poster image, and the second defines a scale animation. They are both launched in an init() function using BrightScript. When run together, the effect is to "bloom" the poster image on the screen.
 
@@ -124,4 +124,4 @@ end function
 
 ## Sample app
 
-[SimpleAnimation](https://github.com/rokudev/samples/tree/master/ux%20components/animation) demonstrates Animation in action.
+[SimpleAnimation](https://gitlab.com/rokudev/samples/tree/master/ux%20components/animation) demonstrates Animation in action.

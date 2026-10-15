@@ -213,4 +213,4 @@ Rotation of Posters is supported. On platforms that do not support OpenGL, only 
 
 ## Sample app
 
-[PosterExample](https://github.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/PosterExample) is a sample app demonstrating Poster in action.
+[PosterExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/PosterExample) is a sample app demonstrating Poster in action.

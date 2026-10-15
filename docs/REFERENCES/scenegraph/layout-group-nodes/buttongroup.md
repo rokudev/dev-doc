@@ -42,4 +42,4 @@ The ButtonGroup node class manages the layout, visual attributes, and focus mana
 | buttons                 | array of strings | [ ]                          | WRITE_ONLY        | Allows a set of Button nodes to be easily created by providing an array of button labels. Each string in the array will result in a Button node to be added to the ButtonGroup node, using the string as the button label |
 
 ## Sample app
-[ButtonGroupExample](https://github.com/rokudev/samples/tree/master/ux%20components/widgets/ButtonGroupExample) is a sample app demonstrating ButtonGroup in action.
+[ButtonGroupExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/widgets/ButtonGroupExample) is a sample app demonstrating ButtonGroup in action.

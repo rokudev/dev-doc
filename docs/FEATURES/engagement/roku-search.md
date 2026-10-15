@@ -30,7 +30,7 @@ When the user selects a content item, the content details screen provides option
 
 > This feature is currently available to customers in the United States only.
 
-![roku815px - roku-voice-vsr-channel-transformers](https://image.roku.com/ZHZscHItMTc2/roku-voice-vsr-channel-transformers-v2.jpg)
+![roku815px - roku-voice-vsr-app-transformers](https://image.roku.com/ZHZscHItMTc2/roku-voice-vsr-channel-transformers-v2.jpg)
 
 ### Roku Zones
 

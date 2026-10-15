@@ -748,7 +748,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 <p data-local-id="8488cbf0e88f" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">auto: Roku OS uses current video boundaries to render captions. X, Y, Width, Height attributes will be ignored in this mode.</p>
 </li>
 <li data-local-id="a21d0f8e-ca38-45f8-b4a0-2b6b47db4334" data-prosemirror-content-type="node" data-prosemirror-node-name="listItem" data-prosemirror-node-block="true">
-<p data-local-id="ee6ced834147" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">override: Roku OS uses the area provided by X, Y, Width, Height attributes to render captions. The caption render area is not required to match height/width of captions. As captions can be a single word to multiple lines, channel can provide a much bigger area that is safe and there is no conflict with channel UI elements. In this mode the channel is responsible for any conflicts between captions and its own UI elements; Roku OS might disable smart caption adjustment to avoid interfering with the channel positioning choices.</p>
+<p data-local-id="ee6ced834147" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">override: Roku OS uses the area provided by X, Y, Width, Height attributes to render captions. The caption render area is not required to match height/width of captions. As captions can be a single word to multiple lines, app can provide a much bigger area that is safe and there is no conflict with app UI elements. In this mode the app is responsible for any conflicts between captions and its own UI elements; Roku OS might disable smart caption adjustment to avoid interfering with the app positioning choices.</p>
 </li>
 </ul>
 </td>
@@ -840,7 +840,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 <p data-local-id="fb5cbfac118e" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">integer</p>
 </td>
 <td class="pm-table-cell-content-wrap" data-colwidth="437" data-local-id="7a153dcc-6a43-42c7-94e7-d3b97ca29215" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
-<p data-local-id="8ea311ed1f18" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">Width of the caption custom render area, in pixels. Recommended to use as big as channel UI allows without conflict to provide a flexible safe area that can fit long captions without need to justify them.</p>
+<p data-local-id="8ea311ed1f18" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">Width of the caption custom render area, in pixels. Recommended to use as big as app UI allows without conflict to provide a flexible safe area that can fit long captions without need to justify them.</p>
 </td>
 </tr>
 <tr data-local-id="dda9bc71b9a7" data-prosemirror-content-type="node" data-prosemirror-node-name="tableRow" data-prosemirror-node-block="true">
@@ -851,7 +851,7 @@ The `control` field includes a `prebuffer` option, which allows the video to beg
 <p data-local-id="6914ac2d5fab" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">integer</p>
 </td>
 <td class="pm-table-cell-content-wrap" data-colwidth="437" data-local-id="1c224f05-8686-4c96-86b2-d4dbbb913f9d" data-prosemirror-content-type="node" data-prosemirror-node-name="tableCell" data-prosemirror-node-block="true">
-<p data-local-id="e931ea979059" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">Height of the caption custom render area, in pixels. Recommended to use as big as channel UI allows without conflict to provide a flexible safe area that can fit long captions without need to justify them.</p>
+<p data-local-id="e931ea979059" data-prosemirror-content-type="node" data-prosemirror-node-name="paragraph" data-prosemirror-node-block="true">Height of the caption custom render area, in pixels. Recommended to use as big as app UI allows without conflict to provide a flexible safe area that can fit long captions without need to justify them.</p>
 </td>
 </tr>
 </tbody>

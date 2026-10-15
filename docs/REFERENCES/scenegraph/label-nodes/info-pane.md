@@ -33,4 +33,4 @@ The **InfoPane** node class is used to display an opaque, white-bordered, rounde
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/InfoPaneExample) that demonstrates how to use the InfoPane node.
+You can download and install a [sample app](https://gitlab.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/InfoPaneExample) that demonstrates how to use the InfoPane node.

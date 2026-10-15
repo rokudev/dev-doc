@@ -75,4 +75,4 @@ The following example animates a group of rectangles to expand and change opacit
 
 ## Sample app
 
-[AnimationSequentialExample](https://github.com/rokudev/samples/tree/master/ux%20components/animation/AnimationSequentialExample) is a sample app demonstrating SequentialAnimation in action.
+[AnimationSequentialExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/animation/AnimationSequentialExample) is a sample app demonstrating SequentialAnimation in action.

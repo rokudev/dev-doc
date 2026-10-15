@@ -95,11 +95,11 @@ To ensure success in creating a Public app, you will need to:
 
 1. In the **[Developer Dashboard](https://developer.roku.com/developer)**, click **Public apps** or **Beta apps** based on the type of app you want to create.
 
-   ![channel-builder-2-create-channel - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-create-channel.png)
+   ![app-builder-2-create-app - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-create-channel.png)
 
 2. Click **Create app**. The **New app** dialog opens. Enter the following information:
 
-   ![channel-builder-2-new-public-channel - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-new-public-channel.png)
+   ![app-builder-2-new-public-app - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-new-public-channel.png)
 
 | Field                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | :------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -128,7 +128,7 @@ To ensure success in creating a Public app, you will need to:
 
 Configure how your app is listed in the Streaming Store, including the app's home region, made-for-kids setting, genre, and age rating. To do this, click **Listing Setup**, enter the following properties, and then click **Save**:
 
-![channel-builder-2-listing-setup - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-listing-setup.png)
+![app-builder-2-listing-setup - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-listing-setup.png)
 
 <Table>
   <thead>
@@ -203,11 +203,11 @@ Provide localized names, descriptions, and artwork for your listing in the Strea
 
    If you select multiple languages, a separate tab for each language is used for entering the properties (the currently selected tab is marked with a purple underline).
 
-   ![channel-builder-2-store-assets-languages - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-store-assets-languages.png)
+   ![app-builder-2-store-assets-languages - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-store-assets-languages.png)
 
 3. Enter the following properties for each language supported by your app:
 
-   ![channel-builder-2-store-assets-localized-properties - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-store-assets-localized-properties.png)
+   ![app-builder-2-store-assets-localized-properties - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-store-assets-localized-properties.png)
 
 | Field                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | :----------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -225,11 +225,11 @@ Select the type of app you are creating and provide your contact information fol
 
 1. From the app's management page, click **App profile**.
 
-   ![channel-builder-2-channel-profile-selection - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-profile-selection.png)
+   ![app-builder-2-app-profile-selection - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-profile-selection.png)
 
 2. Enter the following properties:
 
-   ![channel-builder-2-channel-profile-properties - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-profile-properties.png)
+   ![app-builder-2-app-profile-properties - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-profile-properties.png)
 
 | Field                                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | :------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -249,11 +249,11 @@ Select whether you plan on monetizing your app, and if so, the monetization meth
 
 1. From the app's management page, click **Monetization setup**.
 
-   ![channel-builder-2-monetization-selection - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-selection.png)
+   ![app-builder-2-monetization-selection - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-selection.png)
 
 2. Select one or more of the following monetization methods:
 
-   ![channel-builder-2-monetization-options - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-options.png)
+   ![app-builder-2-monetization-options - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-monetization-options.png)
 
 <Table align={["left","left","left"]}>
   <thead>
@@ -362,11 +362,11 @@ Generate an encrypted package file (.pkg) for testing, publishing, and distribut
 
 1. From the app's management page, click **App package**.
 
-   ![channel-builder-2-channel-package-selection - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-package-selection.png)
+   ![app-builder-2-app-package-selection - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-package-selection.png)
 
 2. Enter the following properties:
 
-   ![channel-builder-2-channel-package-options - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-package-options.png)
+   ![app-builder-2-app-package-options - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-channel-package-options.png)
 
 | Field                         | Description                                                                                                                                                                                                                                                                                                                                        |
 | :---------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -386,15 +386,15 @@ To enter deep linking parameters, follow these steps:
 
 1. From the app's management page, click **Deep Linking**.
 
-   ![channel-builder-2-deep-linking-selection - roku815px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-deep-linking-selection.png)
+   ![app-builder-2-deep-linking-selection - roku815px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-deep-linking-selection.png)
 
 2. For each set of deep linking parameters to be included in the certification test, click **Add deep link** (or **Add** if at least one deep link is already listed).
 
-   ![channel-builder-2-deep-linking-start - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-deep-linking-start.png)
+   ![app-builder-2-deep-linking-start - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-deep-linking-start.png)
 
 3. Enter the following information in the **Add new deep link parameter** dialog, and then click **Save**:
 
-   ![channel-builder-2-deep-linking-new-dialog - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-deep-linking-new-dialog.png)
+   ![app-builder-2-deep-linking-new-dialog - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-deep-linking-new-dialog.png)
 
 | Field         | Description                                                                                                                                                                                                                                                                                                                         |
 | :------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -405,7 +405,7 @@ To enter deep linking parameters, follow these steps:
 
 4. The deep linking parameters are added to the list. You can edit and delete deep linking parameters in the list.
 
-   ![channel-builder-2-deep-linking-added - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-deep-linking-added.png)
+   ![app-builder-2-deep-linking-added - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-deep-linking-added.png)
 
 ### Static Analysis
 
@@ -413,15 +413,15 @@ The Static Analysis tool checks the app's code for the use of deprecated APIs, a
 
 1. From the app's management page, click **Static Analysis**.
 
-   ![channel-builder-2-static-analysis-selection - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-static-analysis-selection.png)
+   ![app-builder-2-static-analysis-selection - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-static-analysis-selection.png)
 
 2. Click **Run analysis**.
 
-   ![channel-builder-2-static-analysis-run-analysis - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-static-analysis-run-analysis.png)
+   ![app-builder-2-static-analysis-run-analysis - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-static-analysis-run-analysis.png)
 
 3. The window will update to indicate that analysis is underway and may take a few minutes to complete. When testing has been completed, the **Analysis results** screen opens and lists any error, warning, and info messages.
 
-   ![channel-builder-2-static-analysis-results - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-static-analysis-results.png)
+   ![app-builder-2-static-analysis-results - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-static-analysis-results.png)
 
 4. For each message, the following information is provided. You can filter the test results based on the **Severity** or **Category**.
 
@@ -521,13 +521,13 @@ To run App Behavior Analysis testing on your app, follow these steps:
 
 1. From the app's management page, click **App Behavior Analysis**.
 
-   ![channel-builder-2-cba-selection.png - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-cba-selection.png)
+   ![app-builder-2-cba-selection.png - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-cba-selection.png)
 
 2. If customers are required to sign in to your app, upload your [sign-in and sign-out test scripts](doc:authenticated-cert-testing) (unauthenticated apps can skip this step).
 
 3. Click **Run**. Alternatively, you can scroll to the bottom of the **Preview and Publish** page that opens after you submit your deep linking parameters, click **App Behavior Analysis**, and then run the App Behavior Analysis test.
 
-   ![channel-builder-2-cba-run-analysis - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-cba-run-analysis.png)
+   ![app-builder-2-cba-run-analysis - roku600px](https://image.roku.com/ZHZscHItMTc2/channel-builder-2-cba-run-analysis.png)
 
 4. Once you start the certification testing tool, the **Device** and **Firmware** fields lists the Roku test device in the cloud that is being used and the Roku OS running on it, respectively. The **Test progress** field includes a spinner indicating that the test is running, and the number of tests completed and the total tests to be run. Testing of apps is done in a first-in, first-out method; therefore, the certification testing of your app may be queued.
 
@@ -687,11 +687,11 @@ To rollback an app release, follow these steps:
 
 1. Click the options menu in the upper right-hand corner and click **Rollback app** in the shortcut menu.
 
-   ![channel-rollback-shortcut roku600px](https://image.roku.com/ZHZscHItMTc2/channel-rollback-shortcut.png)
+   ![app-rollback-shortcut roku600px](https://image.roku.com/ZHZscHItMTc2/channel-rollback-shortcut.png)
 
 2. The confirmation dialog displays the current app version and the previous version to which the app will be rolled back.
 
-   ![channel-rollback-confirmation-dialog roku600px](https://image.roku.com/ZHZscHItMTc2/channel-rollback-confirmation-v2.png)
+   ![app-rollback-confirmation-dialog roku600px](https://image.roku.com/ZHZscHItMTc2/channel-rollback-confirmation-v2.png)
 
 3. If the previous app version was made for kids, click **Yes**.
 

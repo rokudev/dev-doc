@@ -16,7 +16,7 @@ next:
 
 ## About this video
 
-This video demonstrates the [Roku Remote Debugger](https://github.com/rokudev/remote-debugger), and it shows how the BrightScript network debug protocol could be used in an integration with an IDE such as Visual Studio Code.
+This video demonstrates the [Roku Remote Debugger](https://gitlab.com/rokudev/remote-debugger), and it shows how the BrightScript network debug protocol could be used in an integration with an IDE such as Visual Studio Code.
 
 ## Related documentation
 

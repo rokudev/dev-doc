@@ -111,4 +111,4 @@ The DynamicKeyboardBase is an abstract class that provides the functionality for
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/dynamic-voice-enabled-keyboards) that demonstrates how to create and configure dynamic voice-enabled keyboards. The sample app includes a voice-enabled keyboard, PIN pad, mini-keyboard, and custom keyboard (an address keyboard form).
+You can download and install a [sample app](https://gitlab.com/rokudev/dynamic-voice-enabled-keyboards) that demonstrates how to create and configure dynamic voice-enabled keyboards. The sample app includes a voice-enabled keyboard, PIN pad, mini-keyboard, and custom keyboard (an address keyboard form).

@@ -30,7 +30,7 @@ To monetize content in an app by offering subscriptions and one-time purchases, 
 
 ## Monetization
 
-Specify the monetization methods for your app by selecting which in-app products it will contain: **in-channel subscriptions** and/or **in-channel one-time purchases**. See [Setting the monetization method](doc:monetization-in-developer-dashboard) for more information.
+Specify the monetization methods for your app by selecting which in-app products it will contain: **in-app subscriptions** and/or **in-app one-time purchases**. See [Setting the monetization method](doc:monetization-in-developer-dashboard) for more information.
 
 ![roku815px - monetization-method](https://image.roku.com/ZHZscHItMTc2/monetization-method-v4c.png)
 
@@ -38,7 +38,7 @@ Specify the monetization methods for your app by selecting which in-app products
 
 Once your app is enabled for billing testing, you need subscription and one-time purchase products to test with. You can add one or more products to your app in a few steps. Provide basic information such as the name, unique code, and app for the product, and configure its pricing. You can also offer free trial periods and discounts for subscription products. See [Adding in-app products](doc:product-catalog) for more information.
 
-![roku815px - in-channel-product.jpg](https://image.roku.com/ZHZscHItMTc2/in-channel-product-v3.png)
+![roku815px - in-app-product.jpg](https://image.roku.com/ZHZscHItMTc2/in-channel-product-v3.png)
 
 ## Test Users
 

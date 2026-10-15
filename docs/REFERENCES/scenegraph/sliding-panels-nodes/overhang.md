@@ -195,4 +195,4 @@ The appearance and contents of the Overhang can be customized by setting its fie
 
 
 ## Sample app
-[OverhangExample](https://github.com/rokudev/samples/tree/master/ux%20components/sliding%20panels/OverhangExample) is a sample app demonstrating Overhang in action.
+[OverhangExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/sliding%20panels/OverhangExample) is a sample app demonstrating Overhang in action.

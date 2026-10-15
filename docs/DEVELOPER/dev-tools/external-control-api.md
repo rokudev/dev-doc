@@ -619,7 +619,7 @@ The response includes the following fields:
 
 ##### exit-app example
 
-The following command suspends or terminates an app that is running. The optional `/true` parameter will force the termination of the app even if it supports instant-resume. Without this, an instant-resume channel will remain running in the background.
+The following command suspends or terminates an app that is running. The optional `/true` parameter will force the termination of the app even if it supports instant-resume. Without this, an instant-resume app will remain running in the background.
 
 ```bash
 $ curl -d '' "http://$ROKU_DEV_TARGET:8060/exit-app/<channelId>[/true]"
@@ -838,4 +838,4 @@ The Roku platform supports the DIAL (Discovery and Launch) protocol. DIAL is a s
 
 Many current Roku developers are familiar with the Roku external control protocol (ECP) which includes functionality similar to DIAL. An experienced Roku developer may thus fairly ask the question "why do I need DIAL?" One reason is that you may already have a DIAL based second screen implementation for use with other platforms. DIAL support on the Roku platform means that you don't need to add a second protocol to your current application for discovery and launch.
 
-[The Roku DIAL sample](https://github.com/rokudev/samples/tree/master/utilities)  contains detailed documentation of Roku DIAL support, as well as BrightScript, Android, and iOS sample applications. In DIAL parlance, the BrightScript sample is the first screen application, and the Android and iOS apps are the second screen applications. These sample applications should help you get started with your own Roku DIAL support.
+[The Roku DIAL sample](https://gitlab.com/rokudev/samples/tree/master/utilities)  contains detailed documentation of Roku DIAL support, as well as BrightScript, Android, and iOS sample applications. In DIAL parlance, the BrightScript sample is the first screen application, and the Android and iOS apps are the second screen applications. These sample applications should help you get started with your own Roku DIAL support.

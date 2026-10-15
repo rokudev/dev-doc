@@ -160,7 +160,7 @@ Once you have validated your search feed, you can submit your feed following the
   </thead>
   <tbody>
     <tr>
-      <td>Channel</td>
+      <td>App</td>
       <td>Select the app to be linked to your search feed. Only public apps that have been published can be selected. To publish your search feed at the same time you publish your app, contact <a href="https://developer.roku.com/contact">Partner Success</a>.</td>
     </tr>
     <tr>
@@ -224,7 +224,7 @@ Before submitting your search feed for review, you need to test your app's [deep
 
 3. In the **Beta feed validation report** section, you can view the percentage and number of entries in your unpublished feed that passed or failed validation. Click **Download (.json)** to review a JSON file with the errors and warning in your feed. Click **View beta feed report** to review the feed's ingestion report.
 
-4. The **Search beta app** section provides details about the beta version of your app that was automatically created in your developer account when you initially submitted your feed. The app is named "`<appName>` SearchBeta", and it is listed in the **Search testing channels** section on the **Beta channels** page. You use this beta app specifically to test your search feed integration.
+4. The **Search beta app** section provides details about the beta version of your app that was automatically created in your developer account when you initially submitted your feed. The app is named "`<appName>` SearchBeta", and it is listed in the **Search testing apps** section on the **Beta apps** page. You use this beta app specifically to test your search feed integration.
 
    The following information is listed for your search beta app:
 

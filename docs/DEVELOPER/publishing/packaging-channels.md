@@ -89,7 +89,7 @@ developers can use the built-in client through Terminal.
 
 1. Open a Telnet session. Open Terminal and type: `telnet <Roku-IP-address> 8080`
 
-   ![roku815px - packaging-channels-5](https://image.roku.com/ZHZscHItMTc2/packaging-channels-5.png "packagingchannels5")
+   ![roku815px - packaging-apps-5](https://image.roku.com/ZHZscHItMTc2/packaging-channels-5.png "packagingchannels5")
 
 2. Run the `genkey` utility to create a signing key. Enter `genkey` at the command prompt and wait for the process to complete. If the prompt says “Command not recognized”,  type it again. Upon completion, a key has been successfully generated to sign packages.
 

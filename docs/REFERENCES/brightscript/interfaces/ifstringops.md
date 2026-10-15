@@ -211,41 +211,41 @@ The trimmed string.
 
 ##### Description
 
-Returns the value of the string interpreted as a decimal number.
+Returns the value of the string interpreted as a decimal number. Leading whitespace is ignored, and parsing stops at the first character that is not valid for the type. If no value can be parsed, 0 is returned.
 
 ##### Return Value
 
-The decimal number representation of the string.
+The decimal number representation of the string, or 0 if no value can be parsed.
 
 ### ToFloat() as Float
 
 ##### Description
 
-Returns the value of the string interpreted as a floating point number.
+Returns the value of the string interpreted as a floating point number. Leading whitespace is ignored, and parsing stops at the first character that is not valid for the type. If no value can be parsed, 0 is returned.
 
 ##### Return Value
 
-The floating point number representation of the string.
+The floating point number representation of the string, or 0 if no value can be parsed.
 
 ### ToDouble() as Double
 
 ##### Description
 
-Returns the value of the string interpreted as a double-precision floating point number.
+Returns the value of the string interpreted as a double-precision floating point number. Leading whitespace is ignored, and parsing stops at the first character that is not valid for the type. If no value can be parsed, 0 is returned.
 
 ##### Return Value
 
-The double-precision floating point number representation of the string.
+The double-precision floating point number representation of the string, or 0 if no value can be parsed.
 
 ### ToLongInteger() as LongInteger
 
 ##### Description
 
-Returns the value of the string interpreted as a long integer.
+Returns the value of the string interpreted as a long integer. Leading whitespace is ignored, and parsing stops at the first character that is not valid for the type. If no value can be parsed, 0 is returned.
 
 ##### Return Value
 
-The long integer representation of the string.
+The long integer representation of the string, or 0 if no value can be parsed.
 
 ### Tokenize(delim as String) as Object
 

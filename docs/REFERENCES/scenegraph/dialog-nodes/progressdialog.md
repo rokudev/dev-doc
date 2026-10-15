@@ -36,4 +36,4 @@ The message, bulleted text, graphic, and button regions of the dialog should all
 
 ## Sample app
 
-[ProgressDialogExample](https://github.com/rokudev/samples/tree/master/ux%20components/dialogs/ProgressDialogExample) is a sample app demonstrating ProgressDialog in action.
+[ProgressDialogExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/dialogs/ProgressDialogExample) is a sample app demonstrating ProgressDialog in action.

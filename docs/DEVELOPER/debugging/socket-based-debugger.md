@@ -2152,13 +2152,13 @@ Virtual variables are only returned if both GET_VIRTUAL_KEYS and GET_CHILD_KEYS 
 
 ## Sample remote debugger
 
-You can [download the Roku Remote Debugger](https://github.com/rokudev/remote-debugger), which is a Python-based sample command-line remote debugger for testing and debugging Roku apps under development. The Roku Remote Debugger (**rokudebug.py**) provides the same functionality as the [BrightScript debug console](/docs/developer/debugging/index.md#brightscript-console-port-8085-commands); however, it demonstrates how the BrightScript network debug protocol could be used to integrate a debug tool into an IDE.
+You can [download the Roku Remote Debugger](https://gitlab.com/rokudev/remote-debugger), which is a Python-based sample command-line remote debugger for testing and debugging Roku apps under development. The Roku Remote Debugger (**rokudebug.py**) provides the same functionality as the [BrightScript debug console](/docs/developer/debugging/index.md#brightscript-console-port-8085-commands); however, it demonstrates how the BrightScript network debug protocol could be used to integrate a debug tool into an IDE.
 
 To run the Roku Remote Debugger, follow these steps:
 
 1. Verify that you have Python 3.5.3 (or greater) installed on your machine.
 
-2. [Create a ZIP file](/docs/developer/getting-started/hello-world.md#compressing-the-contents-of-the-hello-world-directory) containing the development app to be tested. You can also [download sample apps](https://github.com/rokudev/samples) to test with the debugger.
+2. [Create a ZIP file](/docs/developer/getting-started/hello-world.md#compressing-the-contents-of-the-hello-world-directory) containing the development app to be tested. You can also [download sample apps](https://gitlab.com/rokudev/samples) to test with the debugger.
 
 3. Sideload an app by entering the following command in a terminal or command prompt:
 
@@ -2194,11 +2194,11 @@ To run the Roku Remote Debugger, follow these steps:
 
 ## [BETA] Visual Studio Code extension
 
-You can [download](https://github.com/rokudev/debug-protocol-vscode-ext-beta) the beta version of the Visual Studio Code extension for the Roku BrightScript debug protocol. After extracting and installing the extension, you can use it for debugging Roku apps in Visual Studio.
+You can [download](https://gitlab.com/rokudev/debug-protocol-vscode-ext-beta) the beta version of the Visual Studio Code extension for the Roku BrightScript debug protocol. After extracting and installing the extension, you can use it for debugging Roku apps in Visual Studio.
 
 ## Demo video
 
-The following video demonstrates the [Roku Remote Debugger](https://github.com/rokudev/remote-debugger), and it shows how the BrightScript network debug protocol could be used in an integration with an IDE such as Visual Studio Code.
+The following video demonstrates the [Roku Remote Debugger](https://gitlab.com/rokudev/remote-debugger), and it shows how the BrightScript network debug protocol could be used in an integration with an IDE such as Visual Studio Code.
 
 <video src="https://image.roku.com/ZHZscHItMTc2/roku-brightscript-debug-protocol.mp4" poster="https://image.roku.com/ZHZscHItMTc2/roku-brightscript-network-debug-protocol.jpg" width="720" height="480" controls />
 

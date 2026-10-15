@@ -73,6 +73,6 @@ The following summarizes how to achieve certain animation effects.
 | Animate an array of floats | [FloatArrayFieldInterpolator](doc:floatarrayfieldinterpolator) | any field holding an array of floats | Each `keyValue` entry is itself an array, and every one of those arrays must have the same number of entries as the field being interpolated. Available since [Roku OS 16.0](doc:release-notes#roku-os-160) |
 
 You can try out these concepts by downloading and installing this
-sample: [SimpleAnimation](https://github.com/rokudev/samples/tree/master/ux%20components/animation). It
+sample: [SimpleAnimation](https://gitlab.com/rokudev/samples/tree/master/ux%20components/animation). It
 shows a number of animation types, including opacity, translation, and
 color animations.

@@ -288,7 +288,7 @@ The following table lists the requirements for implementing the personalized pro
 <tr>
 <td class="short-line">Id</td>
 <td class="short-line">String</td>
-<td class="long-line">Identifies the product to be purchased, as entered in the <strong>Product Identifier</strong> field on the <a href="https://developer.roku.com/products">In-Channel Product page in the Developer Dashboard</a> when the product was created. The name of the in-app product must include the app name.</td>
+<td class="long-line">Identifies the product to be purchased, as entered in the <strong>Product Identifier</strong> field on the <a href="https://developer.roku.com/products">In-App Product page in the Developer Dashboard</a> when the product was created. The name of the in-app product must include the app name.</td>
 </tr>
 <tr>
 <td class="short-line">desc</td>

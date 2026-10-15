@@ -41,4 +41,4 @@ The PinDialog node displays a privacy hint at the bottom of the dialog instructi
 
 ## Sample app
 
-[PinDialogExample](https://github.com/rokudev/samples/tree/master/ux%20components/dialogs/PinDialogExample) is a sample app demonstrating PinDialog in action.
+[PinDialogExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/dialogs/PinDialogExample) is a sample app demonstrating PinDialog in action.

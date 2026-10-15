@@ -37,10 +37,10 @@ These attributes must be set to handle secure HTTP transfers of audio files. Not
 
 ## Example
 
-**Example application:** [AudioExample](https://github.com/rokudev/samples/tree/master/media/AudioExample)
+**Example application:** [AudioExample](https://gitlab.com/rokudev/samples/tree/master/media/AudioExample)
 
-[AudioExample](https://github.com/rokudev/samples/tree/master/media/AudioExample) uses a [LabelList](doc:labellist) node to select from several spoken audio examples. The [Content Meta-Data](doc:content-metadata) for the example is found in the `pkg:/server/audiocontent.xml` file, read into a [ContentNode](doc:contentnode) node by the [Task](doc:task) node `audiocontentreader.xml` component file.
+[AudioExample](https://gitlab.com/rokudev/samples/tree/master/media/AudioExample) uses a [LabelList](doc:labellist) node to select from several spoken audio examples. The [Content Meta-Data](doc:content-metadata) for the example is found in the `pkg:/server/audiocontent.xml` file, read into a [ContentNode](doc:contentnode) node by the [Task](doc:task) node `audiocontentreader.xml` component file.
 
 ## Sample app
 
-[AudioExample](https://github.com/rokudev/samples/tree/master/media/AudioExample) is a sample app demonstrating Audio in action.
+[AudioExample](https://gitlab.com/rokudev/samples/tree/master/media/AudioExample) is a sample app demonstrating Audio in action.

@@ -82,4 +82,4 @@ To implement voice support for a profile selection screen, integrate the followi
 
 ## Sample app
 
-The [custom UI voice control sample (**Transport_Control_CustomUI**)](https://github.com/rokudev/transport-control) demonstrates how to add voice support to a profile selection screen.
+The [custom UI voice control sample (**Transport_Control_CustomUI**)](https://gitlab.com/rokudev/transport-control) demonstrates how to add voice support to a profile selection screen.

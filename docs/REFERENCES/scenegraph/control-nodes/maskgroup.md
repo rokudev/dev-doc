@@ -32,7 +32,7 @@ As shown in above, the transformed mask may not overlay all the rendered pixels 
 
 ### Example
 
-[MaskGroup](https://github.com/rokudev/samples/tree/master/ux%20components/control) shows how to use a MaskGroup node to conceal and reveal a poster.
+[MaskGroup](https://gitlab.com/rokudev/samples/tree/master/ux%20components/control) shows how to use a MaskGroup node to conceal and reveal a poster.
 
 ## Fields
 
@@ -46,4 +46,4 @@ As shown in above, the transformed mask may not overlay all the rendered pixels 
 
 ## Sample app
 
-[MaskGroupExample](https://github.com/rokudev/samples/tree/master/ux%20components/control/MaskGroupExample) is a sample app demonstrating MaskGroup in action.
+[MaskGroupExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/control/MaskGroupExample) is a sample app demonstrating MaskGroup in action.

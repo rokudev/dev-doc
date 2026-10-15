@@ -51,4 +51,4 @@ The **StdDlgItemGroup** node may contain one or more [**StdDlgItemBase**](doc:st
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/standard-dialog-framework) that demonstrates how to create a custom dialog that includes action card items in an item group.
+You can download and install a [sample app](https://gitlab.com/rokudev/standard-dialog-framework) that demonstrates how to create a custom dialog that includes action card items in an item group.

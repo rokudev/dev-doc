@@ -76,4 +76,4 @@ The following example animates a group of rectangles to expand and change opacit
 
 ## Sample app
 
-[AnimationParallelExample](https://github.com/rokudev/samples/tree/master/ux%20components/animation/AnimationParallelExample) is a sample app demonstrating ParallelAnimation in action.
+[AnimationParallelExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/animation/AnimationParallelExample) is a sample app demonstrating ParallelAnimation in action.

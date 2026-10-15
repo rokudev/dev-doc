@@ -48,4 +48,4 @@ The default appearance of the MiniKeyboard node is very transparent, allowing th
 | lowerCase         | boolean          | true           | READ_WRITE        | Specifies whether the 26 letter keys are displayed as lowercase or uppercase |
 
 ## Sample app	
-[MiniKeyboardExample](https://github.com/rokudev/samples/tree/master/ux%20components/widgets/MiniKeyboardExample) is a sample app demonstrating MiniKeyboard in action.
+[MiniKeyboardExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/widgets/MiniKeyboardExample) is a sample app demonstrating MiniKeyboard in action.

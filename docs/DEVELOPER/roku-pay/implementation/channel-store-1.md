@@ -66,11 +66,11 @@ The **[getAllPurchases](doc:channelstore#getallpurchases)** command is similar t
 
 ### storeChannelCredData
 
-The [**storeChannelCredData** command](doc:channelstore#storechannelcreddata) stores the publisher's access token for an in-channel product in the Roku cloud. This command is used to implement [Automatic Account Link](doc:universal-authentication-protocol-for-single-sign-on), which enables customers to access their entitled content on all the devices linked to their Roku customer account—without requiring any additional authentication.
+The [**storeChannelCredData** command](doc:channelstore#storechannelcreddata) stores the publisher's access token for an in-app product in the Roku cloud. This command is used to implement [Automatic Account Link](doc:universal-authentication-protocol-for-single-sign-on), which enables customers to access their entitled content on all the devices linked to their Roku customer account—without requiring any additional authentication.
 
 ### getChannelCred
 
-The [**getChannelCred** command](doc:channelstore#getchannelcred) retrieves the publisher's access token for an in-channel product from the Roku cloud. It is used to verify whether the customer is entitled to an in-app product.
+The [**getChannelCred** command](doc:channelstore#getchannelcred) retrieves the publisher's access token for an in-app product from the Roku cloud. It is used to verify whether the customer is entitled to an in-app product.
 
 ## Testing the ChannelStore implementation
 

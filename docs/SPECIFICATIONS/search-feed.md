@@ -202,7 +202,7 @@ If the playOption is "live" event this field indicates when the stream should go
 
 ### StationInfo
 
-If the **asset.type** field is set to "liveStream" for a content item, provide metadata about the channel. The Gracenote tech ID (prgSvcId) for the live channel to be made discoverable through the Roku Search customer experience.
+If the **asset.type** field is set to "liveStream" for a content item, provide metadata about the app. The Gracenote tech ID (prgSvcId) for the live channel to be made discoverable through the Roku Search customer experience.
 
 | Field     | Type   | Description                                  | Required |
 | :-------- | :----- | :------------------------------------------- | :------- |
@@ -327,7 +327,7 @@ The following example demonstrates a feed that includes both Live and VOD conten
 
 Apps in the U.S. Streaming Store with 24/7 live linear streams can participate in Roku's Live Search by creating and submitting a web-hosted JSON feed that includes the 24/7 live channels in their service. The Roku Live Search feed is modeled after Roku's Search feed JSON specification above, but requires only a small subset of fields. One of the fields is the **externalIds** field, which contains the Gracenote station IDs for the live channels to be discoverable.
 
-Your search feed may only include channels directly distributed by your app. Do not include channels offered through third-party channel subscriptions (subscriptions or add-ons that require a separate publisher account).
+Your search feed may only include apps directly distributed by your app. Do not include apps offered through third-party app subscriptions (subscriptions or add-ons that require a separate publisher account).
 
 > The live linear integration requires Gracenote Station IDs. Individual live events or channels without Gracenote Station IDs are currently not supported. Roku uses Gracenote EPG and GSD data (schedule of event IDs). Publishers are responsible for contacting Gracenote to get their Station IDs.
 
@@ -458,7 +458,7 @@ Developers can use the Roku Search feed schema to validate the format of their s
 
 > Some fields in the schema are for use by content providers onboarding content into The Roku Channel only.
 >
-> Click [here](https://github.com/rokudev/search-feed-json) to download Roku's Search feed schema.
+> Click [here](https://gitlab.com/rokudev/search-feed-json) to download Roku's Search feed schema.
 
 ```json
 {
@@ -2135,7 +2135,7 @@ The following examples, which pass Roku's schema validation, demonstrate the pro
 
 ### Simple feed example (single content item)
 
-> Click [here](https://github.com/rokudev/search-feed-json/archive/refs/heads/main.zip) to download this sample feed.
+> Click [here](https://gitlab.com/rokudev/search-feed-json/archive/refs/heads/main.zip) to download this sample feed.
 
 ```json
 {
@@ -2228,7 +2228,7 @@ The following examples, which pass Roku's schema validation, demonstrate the pro
 
 ### Advanced feed example (series, season, episode)
 
-> Click [here](https://github.com/rokudev/search-feed-json/archive/refs/heads/main.zip) to download this sample feed.
+> Click [here](https://gitlab.com/rokudev/search-feed-json/archive/refs/heads/main.zip) to download this sample feed.
 
 ```json
 {
@@ -2444,7 +2444,7 @@ The following examples, which pass Roku's schema validation, demonstrate the pro
 
 ### TMS feed example (movies, series, episode)
 
-> Click [here](https://github.com/rokudev/search-feed-json/archive/refs/heads/main.zip) to download this sample feed. The prefixes in the IDs indicate the content type (MV=movie, SH=series, EP=episode).
+> Click [here](https://gitlab.com/rokudev/search-feed-json/archive/refs/heads/main.zip) to download this sample feed. The prefixes in the IDs indicate the content type (MV=movie, SH=series, EP=episode).
 
 ```json
 {

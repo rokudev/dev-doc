@@ -64,4 +64,4 @@ The **StdDlgTextItem** node is used to display a block of text. It should only b
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/standard-dialog-framework) that demonstrates how to create a custom dialog that uses the text item.
+You can download and install a [sample app](https://gitlab.com/rokudev/standard-dialog-framework) that demonstrates how to create a custom dialog that uses the text item.

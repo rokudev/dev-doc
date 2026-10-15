@@ -38,9 +38,9 @@ The Streaming Store can be found on the home screen of any Roku device by naviga
 
 Once in the Streaming Store, there are a variety of ways for users to find an app. The Streaming Store is broken into several categories, including specific genres, Most Watched, and “Top Free” apps. Each new app added to the Streaming Store is also featured in the “New” category for 30 days.
 
-Users can also use the Roku Search feature in the left navigation bar of the Roku home screen (or the “Search channel” bar from the web) to find specific apps they’re looking for. Roku Search can also accept key terms, such as entering the words “news,” “sports,” or “weather” followed by a date.
+Users can also use the Roku Search feature in the left navigation bar of the Roku home screen (or the “Search app” bar from the web) to find specific apps they’re looking for. Roku Search can also accept key terms, such as entering the words “news,” “sports,” or “weather” followed by a date.
 
-![roku815px - channelstore3-finding-channels](https://image.roku.com/ZHZscHItMTc2/channelstore3.png "channelstore3")
+![roku815px - channelstore3-finding-apps](https://image.roku.com/ZHZscHItMTc2/channelstore3.png "channelstore3")
 
 ## Downloading apps
 
@@ -58,13 +58,13 @@ When viewing an app from your Roku device, you’ll see the following informatio
 * Price
 * The developer who built the app
 
-The page will also contain an “Add channel” button, which will automatically add the app to your homescreen. You may be asked to enter your billing password if the app costs money.
+The page will also contain an “Add app” button, which will automatically add the app to your homescreen. You may be asked to enter your billing password if the app costs money.
 
 ## Installing via web store
 
 ![roku815px - channelstore5-installing-via-webstore](https://image.roku.com/ZHZscHItMTc2/channelstore5.png "channelstore5")
 
-Users in the US can also find similar information by searching for the app on the [web store](https://channelstore.roku.com/browse). As with the Roku Player, click the “+ Add Channel” button while logged in to your Roku account to add the app to your Roku device.
+Users in the US can also find similar information by searching for the app on the [web store](https://channelstore.roku.com/browse). As with the Roku Player, click the “+ Add App” button while logged in to your Roku account to add the app to your Roku device.
 
 ## Installing via vanity code
 
@@ -75,14 +75,14 @@ Every app has an access code that can be accessed from the web to quickly instal
 * Login to your Roku account
 * Enter [https://my.roku.com/account/add?channel=VANITY_CODE](https://my.roku.com/account/add?channel=VANITY_CODE) in your browser
 * Replace VANITY_CODE with the app’s access code
-* Click "Yes, Add Channel"
+* Click "Yes, Add App"
 
 **Note:** When installing an app from the web, you will need to check for system updates before the app will appear on your home screen. To check for system updates on your Roku device, navigate to Settings > System > System Update > Check Now.
 
 For more information on how to add or remove an app via the Streaming Store, read the following support articles:
 
-* [How do I add channels from my Roku® streaming device?](https://support.roku.com/article/208756388-how-do-i-add-channels-to-my-roku-streaming-device-)
-* [How do I remove channels from my Roku® streaming device?](https://support.roku.com/article/232010488-how-do-i-remove-channels-from-my-roku-streaming-device-)
+* [How do I add apps from my Roku® streaming device?](https://support.roku.com/article/208756388-how-do-i-add-channels-to-my-roku-streaming-device-)
+* [How do I remove apps from my Roku® streaming device?](https://support.roku.com/article/232010488-how-do-i-remove-channels-from-my-roku-streaming-device-)
 
 ## Multiple Streaming Stores
 

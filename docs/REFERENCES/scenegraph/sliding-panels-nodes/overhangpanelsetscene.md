@@ -53,4 +53,4 @@ scene = screen.CreateScene("OverhangPanelSetScene")
 
 
 ## Sample app
-[OverhangPanelSetSceneExample](https://github.com/rokudev/samples/tree/master/ux%20components/sliding%20panels/OverhangPanelSetSceneExample) is a sample app demonstrating OverhangPanelSetScene in action.
+[OverhangPanelSetSceneExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/sliding%20panels/OverhangPanelSetSceneExample) is a sample app demonstrating OverhangPanelSetScene in action.

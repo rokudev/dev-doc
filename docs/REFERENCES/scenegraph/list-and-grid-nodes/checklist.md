@@ -114,4 +114,4 @@ The section root ContentNodes use the following attributes:
 | SDGRIDPOSTERURL | uri    | The image file for the icon to be displayed to the left of the section label when the screen resolution is set to SD. |
 
 ## Sample app	
-[CheckListExample](https://github.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/CheckListExample) is a sample app demonstrating CheckList in action.
+[CheckListExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/CheckListExample) is a sample app demonstrating CheckList in action.

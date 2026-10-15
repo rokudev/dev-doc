@@ -510,4 +510,4 @@ Apps with an EPG must fire signal beacons to measure the EPG launch time. Beacon
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/SceneGraphDeveloperExtensions/tree/master/samples/TimeGridView) that demonstrates how to use the TimeGridView in the SceneGraph Developer Extensions (SGDEX) to create an EPG. This sample app uses a row-by-row loading model. In this model, a handler config running on the root node of a content tree creates a child node for each row in the EPG. Each of the row child nodes has a handler that creates a child node for each program that should be displayed on that row.
+You can download and install a [sample app](https://gitlab.com/rokudev/SceneGraphDeveloperExtensions/tree/master/samples/TimeGridView) that demonstrates how to use the TimeGridView in the SceneGraph Developer Extensions (SGDEX) to create an EPG. This sample app uses a row-by-row loading model. In this model, a handler config running on the root node of a content tree creates a child node for each row in the EPG. Each of the row child nodes has a handler that creates a child node for each program that should be displayed on that row.

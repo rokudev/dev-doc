@@ -356,7 +356,7 @@ This release provides the following improvements, critical bug fixes, and update
 
 ##### Roku Resource Monitor 4.0
 
-[Roku Resource Monitor 4.0 (RRM 4.0)](https://devtools.web.roku.com/#rrm-tool) introduces several UI enhancements, including the ability to disable specific metric panels for your channel. This feature stops monitoring and hides the selected metric, allowing for a more streamlined and customized monitoring experience.  Additionally, RRM 4.0 automatically saves your view configuration, ensuring your preferred layout is retained the next time you launch the tool.
+[Roku Resource Monitor 4.0 (RRM 4.0)](https://devtools.web.roku.com/#rrm-tool) introduces several UI enhancements, including the ability to disable specific metric panels for your app. This feature stops monitoring and hides the selected metric, allowing for a more streamlined and customized monitoring experience.  Additionally, RRM 4.0 automatically saves your view configuration, ensuring your preferred layout is retained the next time you launch the tool.
 
 RRM 4.0 also consolidates the BrightScript Objects panels into one graph and adds an option for displaying the memory used by different objects, breaks out the SceneGraph metrics into the different node types (similar to the BrightScript Objects panel), and lets you drill down into the source code associated with a rendezvous event.
 
@@ -613,7 +613,7 @@ Below is a list of key developer-facing Roku OS 11.0 updates:
 
 ##### Tools
 
-- [**ECP query commands for debugging channels**](/docs/developer/dev-tools/external-control-api.md#general-ecp-commands) — Developers can use the following new ECP query commands to help debug their apps: [**query/chanperf**](/docs/developer/dev-tools/external-control-api.md#querychanperf-example), [**query/r2d2-bitmaps**](/docs/developer/dev-tools/external-control-api.md#queryr2d2-bitmaps-example), **and&#x20;**[query/sgnodes/\[all | root | nodes?node-id=_nodeId_\]](/docs/developer/dev-tools/external-control-api.md#querysgnodesall-example). Developers can leverage these debugging commands, which were previously only available via the debug console, in their web services.
+- [**ECP query commands for debugging apps**](/docs/developer/dev-tools/external-control-api.md#general-ecp-commands) — Developers can use the following new ECP query commands to help debug their apps: [**query/chanperf**](/docs/developer/dev-tools/external-control-api.md#querychanperf-example), [**query/r2d2-bitmaps**](/docs/developer/dev-tools/external-control-api.md#queryr2d2-bitmaps-example), **and&#x20;**[query/sgnodes/\[all | root | nodes?node-id=_nodeId_\]](/docs/developer/dev-tools/external-control-api.md#querysgnodesall-example). Developers can leverage these debugging commands, which were previously only available via the debug console, in their web services.
 
 - [**BrightScript debug protocol updates**](/docs/developer/debugging/socket-based-debugger.md#debugging-target-startup-sequence) — The BrightScript debug protocol includes the following new features: a **platform_revision_timestamp** field for the initial handshake, a **packet_length** field that is included with all packets from the debugger, and runtime errors for the [EXECUTE debug response format](/docs/developer/debugging/socket-based-debugger.md#debugger-response-format).
 
@@ -691,7 +691,7 @@ Below is a list of key developer-facing Roku OS 10.5 updates:
 
 - [**New "screensaver" and "homelist" ad source parameters**](/docs/developer/getting-started/architecture/dev-environment.md#source-parameter) — The Roku OS now includes "ad:screensaver" and "ad:homelist" source parameters, which enable developers to attribute app launches to these specific ad types. Previously, a single "ad" source parameter was used for all the different ad types (homelist \[mini], screensaver, and home screen banner ads). The "ad" source parameter now denotes an app launch from a home screen banner ad only.
 
-- [**Memory exceeded lastExitOrTerminationReasons parameters**](/docs/developer/getting-started/architecture/dev-environment.md#lastexitorterminationreason-parameter) — Developers can now check whether an app was exited because it exceeded per-channel memory limits while running in the foreground (EXIT_CHANNEL_MEM_LIMIT_FG) or background (EXIT_CHANNEL_MEM_LIMIT_BG).
+- [**Memory exceeded lastExitOrTerminationReasons parameters**](/docs/developer/getting-started/architecture/dev-environment.md#lastexitorterminationreason-parameter) — Developers can now check whether an app was exited because it exceeded per-app memory limits while running in the foreground (EXIT_CHANNEL_MEM_LIMIT_FG) or background (EXIT_CHANNEL_MEM_LIMIT_BG).
 
 - [**Memory usage event notifications**](/docs/references/brightscript/components/roappmemorymonitor.md) — Developers can now receive an event notification if their app is approaching the per-app memory usage threshold. A new [**roAppMemoryMonitor**](/docs/references/brightscript/components/roappmemorymonitor.md) component has been added to support this feature. It has an [**EnableMemoryWarningEvent()**](/docs/references/brightscript/interfaces/ifappmemorymonitor.md#enablememorywarningeventenable-as-boolean-as-boolean) function that notifies an app when it has reached 80% of its memory usage limit, and a [**GetMemoryLimitPercent()**](/docs/references/brightscript/interfaces/ifappmemorymonitor.md#getmemorylimitpercent-as-int) function returns the memory limit for the app. Developers can then use the new [**roAppMemoryMonitorEvent**](/docs/references/brightscript/events/roappmemorynotificationevent.md) to get the percentage of the allocated per-app memory that has been used.
 
@@ -761,9 +761,9 @@ Below is a list of key developer-facing Roku OS 10.0 updates:
 
 ##### Architecture
 
-- [Dynamic voice-enabled keyboards](/docs/references/scenegraph/abstract-nodes/dynamic-keyboard-base.md) — Developers can create keyboards, mini keyboards, and pin pads that can be controlled by voice. This helps speed up on-device sign-ups and sign-ins by enabling customers to speak their PIN codes when subscribing to apps and their passwords when logging in. A sample app demonstrating this feature is available [here](https://github.com/rokudev/dynamic-voice-enabled-keyboards).
+- [Dynamic voice-enabled keyboards](/docs/references/scenegraph/abstract-nodes/dynamic-keyboard-base.md) — Developers can create keyboards, mini keyboards, and pin pads that can be controlled by voice. This helps speed up on-device sign-ups and sign-ins by enabling customers to speak their PIN codes when subscribing to apps and their passwords when logging in. A sample app demonstrating this feature is available [here](https://gitlab.com/rokudev/dynamic-voice-enabled-keyboards).
 
-- [Standard dialog framework](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog-framework-overview.md) — Developers can use new pre-built modal pop-up dialogs and build custom ones. A sample app demonstrating this feature is available [here](https://github.com/rokudev/standard-dialog-framework).
+- [Standard dialog framework](/docs/references/scenegraph/standard-dialog-framework-nodes/standard-dialog-framework-overview.md) — Developers can use new pre-built modal pop-up dialogs and build custom ones. A sample app demonstrating this feature is available [here](https://gitlab.com/rokudev/standard-dialog-framework).
 
   These new pre-built and custom standard keyboards are summarized as follows:
 
@@ -791,7 +791,7 @@ This release includes three new or updated port 8080 commands:
 
 - [New remove_plugin command](/docs/developer/debugging/index.md#scenegraph-debug-server-port-8080-commands) that deletes a particular app from the local device _as well as from other devices_ on the same Roku account. The local device, on which the remove_plugin command is executed, must be linked to a Roku account, and deletions elsewhere don't take effect until a device synchronizes with the Streaming Store. Some system capabilities, such as RAF, can be implemented/augmented by the installation of special apps. Especially in beta-test situations, the developer can delete old versions of such channels before installing more recent (or production) versions.
 
-- ["sgnodes all" command extended to detail whether reference counts are held by the OS or the app's scripts](/docs/developer/debugging/index.md#scenegraph-debug-server-port-8080-commands) — A sample app demonstrating this feature is available [here](https://github.com/rokudev/sgnodes-all-demo).
+- ["sgnodes all" command extended to detail whether reference counts are held by the OS or the app's scripts](/docs/developer/debugging/index.md#scenegraph-debug-server-port-8080-commands) — A sample app demonstrating this feature is available [here](https://gitlab.com/rokudev/sgnodes-all-demo).
 
 ##### Deprecated APIs
 
@@ -1213,7 +1213,7 @@ For our consumer release notes, visit the [Roku Blog](https://blog.roku.com/roku
   - [ifAssociativeArray](doc:ifassociativearray): Items()
     - Returns an array containing the associative array key/value pairs in lexicographical order of key. Each item is in the returned array is an associative array with 'key' and 'value' fields.
 
-##### New [manifest](https://github.com/rokudev/docs/blob/master/develop/specifications/manifest.md) entries
+##### New [manifest](https://gitlab.com/rokudev/docs/blob/master/develop/specifications/manifest.md) entries
 
 - automatic_audio_guide_disabled: disable Audio Guide within an app
 - usb_media_handler: auto launch apps when a USB device is inserted
@@ -1223,7 +1223,7 @@ For our consumer release notes, visit the [Roku Blog](https://blog.roku.com/roku
 
 - Port 8085 now provides context for all threads and port 8089-8093 will no longer be used.
   - STOP, breaks, and continue will stop/resume all threads. Prior to 7.5, only one thread would stop/resume.
-  - See the overview on [Debugging SceneGraph applications](https://github.com/rokudev/docs/blob/master/develop/guides/debugging.md#scenegraph-applications) for more details.
+  - See the overview on [Debugging SceneGraph applications](https://gitlab.com/rokudev/docs/blob/master/develop/guides/debugging.md#scenegraph-applications) for more details.
 - New 8085 commands:
   - threads: list all current executed suspended threads
   - thread \<id>: select a suspended thread to debug
@@ -1785,7 +1785,7 @@ The software update options on this screen are controlled via the server and are
 
 ##### New in this release
 
-- Documentation: There continue to be lots of changes to the documentation set, mostly to the Component Reference manual. The documentation has been reformatted with section numbers to make cross-referencing easier. New features have been added and additional details were provided on some video playback topics. The new file system changes are included as well as lots of API updates. There are several new docs in the set, such as the Channel Packaging and Publishing document mentioned above.
+- Documentation: There continue to be lots of changes to the documentation set, mostly to the Component Reference manual. The documentation has been reformatted with section numbers to make cross-referencing easier. New features have been added and additional details were provided on some video playback topics. The new file system changes are included as well as lots of API updates. There are several new docs in the set, such as the App Packaging and Publishing document mentioned above.
 - More Theme Attributes - We added quite a few more attributes changing colors within the UI. The paragraph and registration screens now support color attributes, as well as font color changes to the buttons and filter banners. These still work the same way as they have in the past and allow you to set an HTML Hex color value to override the default color scheme.
 - Flexible Image Scaling - We've added new scaling options for artwork that's used in the Poster Screen, Slide Show or Banner Ads. The new options allow you to specify how you'd like odd-sized artwork scaled to file the destination area.
 - Image Styles - We've added additional styles to several screens for 16x9 and square aspect ratio artwork. There are more changes in the works in this area, which will be coming soon. Many of you have different size and aspect ratio artwork and providing more types of frames, plus better scaling capabilities will help to take advantage of all the existing artwork out there.

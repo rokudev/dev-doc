@@ -83,4 +83,4 @@ The following scrolls the text string "Application Development Made Easy!" back 
 
 ## Sample app
 
-[AnimationV2DExample](https://github.com/rokudev/samples/tree/master/ux%20components/animation/AnimationV2DExample) is a sample app demonstrating Vector2DfieldInterpolator in action.
+[AnimationV2DExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/animation/AnimationV2DExample) is a sample app demonstrating Vector2DfieldInterpolator in action.

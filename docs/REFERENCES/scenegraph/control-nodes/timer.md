@@ -115,4 +115,4 @@ The following changes the text string on the display screen every five seconds a
 
 
 ## Sample app
-[TimerExample](https://github.com/rokudev/samples/tree/master/ux%20components/control/TimerExample) is a sample app demonstrating Timer in action.
+[TimerExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/control/TimerExample) is a sample app demonstrating Timer in action.

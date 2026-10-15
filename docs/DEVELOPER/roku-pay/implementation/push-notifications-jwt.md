@@ -180,4 +180,4 @@ In addition, publishers can manually send a test JWT/JWS-secured message with a 
 
 ## Sample
 
-You can download Roku's [sample application](https://github.com/rokudev/notification-receiver-sample), use it as a template for your implementation, and update it with your custom business logic for processing Roku Pay push notifications. Your backend system application must communicate via HTTPS or leverage an HTTPS reverse proxy.
+You can download Roku's [sample application](https://gitlab.com/rokudev/notification-receiver-sample), use it as a template for your implementation, and update it with your custom business logic for processing Roku Pay push notifications. Your backend system application must communicate via HTTPS or leverage an HTTPS reverse proxy.

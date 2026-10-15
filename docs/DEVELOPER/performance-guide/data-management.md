@@ -63,7 +63,7 @@ end function
 </component>
 ```
 
-The Task makes a local copy of the config global data which it then references via that local variable, avoiding a rendezvous and a copy for subsequent references. Generally speaking a Task should locally copy only what it needs from `m.global`, so there is a design trade-off in grouping data in subtrees versus spreading it all out at the top level. Each such copy will expand the memory footprint of your channel.
+The Task makes a local copy of the config global data which it then references via that local variable, avoiding a rendezvous and a copy for subsequent references. Generally speaking a Task should locally copy only what it needs from `m.global`, so there is a design trade-off in grouping data in subtrees versus spreading it all out at the top level. Each such copy will expand the memory footprint of your app.
 
 ## Task to render thread rendezvous
 

@@ -88,4 +88,4 @@ The StandardKeyboardDialog is comprised of the following areas and building bloc
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/standard-dialog-framework) that demonstrates how to create a standard PINPad dialog.
+You can download and install a [sample app](https://gitlab.com/rokudev/standard-dialog-framework) that demonstrates how to create a standard PINPad dialog.

@@ -20,7 +20,7 @@ This video explains how developers of authenticated subscription (SVOD), ad-supp
 
 [Roku Remote Tool](http://devtools.web.roku.com/#remote-tool)
 
-[On-device authentication sample app](https://github.com/rokudev/on-device-authentication)
+[On-device authentication sample app](https://gitlab.com/rokudev/on-device-authentication)
 
 ## Related documentation
 

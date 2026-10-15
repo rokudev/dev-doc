@@ -72,4 +72,4 @@ The following changes the color of a rectangle, from blue to very dark blue, and
 
 ## Sample app
 
-[AnimationColorExample](https://github.com/rokudev/samples/tree/master/ux%20components/animation/AnimationColorExample) is a sample app demonstrating ColorFieldInterpolator in action.
+[AnimationColorExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/animation/AnimationColorExample) is a sample app demonstrating ColorFieldInterpolator in action.

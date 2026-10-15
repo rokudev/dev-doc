@@ -40,4 +40,4 @@ The data model for the RadioButtonList node should have a single ContentNode as 
 | TITLE     | string | The label for the list item |
 
 ## Sample app	
-[RadioButtonListExample](https://github.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/RadioButtonListExample) is a sample app demonstrating RadioButtonList in action.
+[RadioButtonListExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/RadioButtonListExample) is a sample app demonstrating RadioButtonList in action.

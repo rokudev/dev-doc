@@ -14,7 +14,7 @@ Extends [**Group**](doc:group)
 
 The BusySpinner node class is a simple widget that displays a continuously rotating bitmap. Since the BusySpinner node class uses an internal Poster node instance, the busy spinner bitmap can be specified by setting the internal Poster node uri field.
 
-[SimpleBusySpinner](https://github.com/rokudev/samples/tree/master/ux%20components/widgets) is a sample app that demonstrates usage of the BusySpinner.
+[SimpleBusySpinner](https://gitlab.com/rokudev/samples/tree/master/ux%20components/widgets) is a sample app that demonstrates usage of the BusySpinner.
 
 > Not all Roku Player hardware versions support arbitrary rotations. In particular, some hardware versions only support 90 degree rotation increments. In those cases, the icon will step through 90 degree, 180 degree, 270 degree and back to 0 degree rotations, rather than spin smoothly.
 
@@ -139,4 +139,4 @@ The BusySpinner node class is a simple widget that displays a continuously rotat
 
 ## Sample app
 
-[BusySpinnerExample](https://github.com/rokudev/samples/tree/master/ux%20components/widgets/BusySpinnerExample) is a sample app demonstrating BusySpinner in action.
+[BusySpinnerExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/widgets/BusySpinnerExample) is a sample app demonstrating BusySpinner in action.

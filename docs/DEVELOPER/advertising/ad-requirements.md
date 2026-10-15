@@ -64,7 +64,7 @@ This document lists the requirements for displaying video and interactive ads in
     <tr>
       <td>ADS 1.5</td>
       <td>RFI screen for authenticated ad-monetized apps</td>
-      <td>Authenticated ad-monetized apps must use the <a href="https://developer.roku.com/dev/docs/channelstore#getuserdata">getUserData</a> command to display a Request For Information (RFI) screen during the sign-up and sign-in workflows to enable customers to share their Roku account information with the channel. Only if the user declines the request may apps require the customer to manually enter their information.</td>
+      <td>Authenticated ad-monetized apps must use the <a href="https://developer.roku.com/dev/docs/channelstore#getuserdata">getUserData</a> command to display a Request For Information (RFI) screen during the sign-up and sign-in workflows to enable customers to share their Roku account information with the app. Only if the user declines the request may apps require the customer to manually enter their information.</td>
       <td><a href="https://developer.roku.com/dev/docs/signup-best-practices">Signup requirements and best practices</a><br /><br /><a href="https://developer.roku.com/dev/docs/signin-best-practices">Sign-in requirements and best practices</a></td>
     </tr>
   </tbody>

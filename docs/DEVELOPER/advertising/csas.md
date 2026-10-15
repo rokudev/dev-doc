@@ -67,4 +67,4 @@ Per [Roku's certification requirements](doc:ad-requirements), all ad measurement
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/samples/tree/master/advertising/CSASAdSample) that demonstrates how to create and render a client-side stitched stream. It shows you how you can create a stream by combining a video content item with the ads in a Video Ad Serving Template (VAST), and then render the stitched stream in a SceneGraph object.
+You can download and install a [sample app](https://gitlab.com/rokudev/samples/tree/master/advertising/CSASAdSample) that demonstrates how to create and render a client-side stitched stream. It shows you how you can create a stream by combining a video content item with the ads in a Video Ad Serving Template (VAST), and then render the stitched stream in a SceneGraph object.

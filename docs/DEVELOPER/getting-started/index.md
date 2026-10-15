@@ -36,7 +36,7 @@ The journey from novice to guru may not be without challenges, but Roku is here 
 
 [Start learning how to build Roku apps with SceneGraph](doc:overview)
 
-[Check out the sample apps in the Roku GitHub repository](https://github.com/rokudev/scenegraph-master-sample)
+[Check out the sample apps in the Roku GitHub repository](https://gitlab.com/rokudev/scenegraph-master-sample)
 
 [Visit the Roku Developer forum ](https://community.roku.com/t5/Roku-Developer-Program/bd-p/roku-developer-program)
 

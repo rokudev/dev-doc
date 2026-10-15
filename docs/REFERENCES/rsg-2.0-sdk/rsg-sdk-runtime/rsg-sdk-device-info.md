@@ -194,7 +194,7 @@ corresponding hooks (`useUiResolution`, `useDeviceInfoEvents`) for reactive data
 | Property | Type | Description |
 | :--- | :--- | :--- |
 | `apiVersion` | `number` | Version of the DeviceInfo runtime API (currently `0`). |
-| `channelClientId` | `string` | A UUID identifying this device for this channel. Changes if the account is relinked or in auto-sign-out (guest) mode. |
+| `channelClientId` | `string` | A UUID identifying this device for this app. Changes if the account is relinked or in auto-sign-out (guest) mode. |
 | `currentLocale` | `string` | Active locale string combining language and region (e.g. `"en_US"`, `"fr_FR"`). |
 | `graphicsPlatform` | `GraphicsPlatformType` | GPU/graphics backend identifier. `"opengl"` — modern GL-based rendering pipeline (most devices); `"directfb"` — legacy DirectFB pipeline (older low-end devices) |
 | `isAutoSignOutMode` | `boolean` | `true` when the device is in auto-sign-out mode (shared/public device). |

@@ -16,7 +16,7 @@ The MarkupList node class is a generic list class that can be used to display a 
 
 The contents of each list item is an instance of an XML component specified by the `itemComponentName` field value. An instance of the XML component is used to display the data for each item in the list data model. The appearance of the list item as it enters/exits the list focus position can be customized using BrightScript.
 
-[SimpleMarkupList](https://github.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids) is a sample app containing a MarkupList where each item is an instance of an XML component. See the [MarkupList XML component](#markuplist-xml-component) section for details.
+[SimpleMarkupList](https://gitlab.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids) is a sample app containing a MarkupList where each item is an instance of an XML component. See the [MarkupList XML component](#markuplist-xml-component) section for details.
 
 **Example**
 
@@ -343,4 +343,4 @@ The section root **ContentNode** nodes use the following attributes:
 
 ## Sample app
 
-[MarkupListExample](https://github.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/MarkupListExample) is a sample app demonstrating MarkupList in action.
+[MarkupListExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/MarkupListExample) is a sample app demonstrating MarkupList in action.

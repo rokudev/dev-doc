@@ -404,4 +404,4 @@ Allows apps to style closed captions. For any keys absent from the associative a
 
 ## Sample app
 
-[VideoExample](https://github.com/rokudev/samples/tree/master/media/VideoExample) is a sample app demonstrating Video in action.
+[VideoExample](https://gitlab.com/rokudev/samples/tree/master/media/VideoExample) is a sample app demonstrating Video in action.

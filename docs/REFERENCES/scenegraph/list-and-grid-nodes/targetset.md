@@ -58,4 +58,4 @@ The TargetSet node class is used to specify a set of target regions where items 
 
 ## Sample app
 
-[TwoRowFixedFocus](https://github.com/rokudev/samples/tree/master/ux%20components/screen%20elements/target_group/TwoRowFixedFocus) is a sample app demonstrating TargetSet in action.
+[TwoRowFixedFocus](https://gitlab.com/rokudev/samples/tree/master/ux%20components/screen%20elements/target_group/TwoRowFixedFocus) is a sample app demonstrating TargetSet in action.

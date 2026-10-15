@@ -171,7 +171,7 @@ custom components:
 ##### Example
 
 For an example of extending custom components, download the sample
-app [ExtendingCustomComponents](https://github.com/rokudev/samples/tree/master/ux%20components).
+app [ExtendingCustomComponents](https://gitlab.com/rokudev/samples/tree/master/ux%20components).
 This sample defines a custom component called CenteredRectangle. This
 component creates a rectangle centered on the screen.  It also defines a
 subroutine called **SetColor**, which sets the color property of the

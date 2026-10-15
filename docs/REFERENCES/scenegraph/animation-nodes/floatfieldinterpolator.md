@@ -64,4 +64,4 @@ The following changes the opacity of a graphical image, gradually making it invi
 
 ## Sample app
 
-[AnimationFloatExample](https://github.com/rokudev/samples/tree/master/ux%20components/animation/AnimationFloatExample) is a sample app demonstrating FloatFieldInterpolator in action.
+[AnimationFloatExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/animation/AnimationFloatExample) is a sample app demonstrating FloatFieldInterpolator in action.

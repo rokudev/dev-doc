@@ -23,7 +23,7 @@ your app is installed and is also used in your Streaming Store listing
 displayed alongside the app
 details.
 
-![roku815px - graphics1-channel-poster](https://image.roku.com/ZHZscHItMTc2/graphics1.png "graphics1")
+![roku815px - graphics1-app-poster](https://image.roku.com/ZHZscHItMTc2/graphics1.png "graphics1")
 
 ## App splash screen
 
@@ -40,7 +40,7 @@ the interface.
 
 ![roku815px - graphics3-safe-zone](https://image.roku.com/ZHZscHItMTc2/graphics3.png "graphics3")
 
-We've also created a **[sample app](https://github.com/rokudev/safe-zone-channel)** that shows these safe zones in action.
+We've also created a **[sample app](https://gitlab.com/rokudev/safe-zone-channel)** that shows these safe zones in action.
 
 ### Title safe zone
 
@@ -89,7 +89,7 @@ Creates a transparent SafeZone markup on top of any SceneGraph app
 
 **Event:** Once the app starts, a transparent overlay will show on top of the app UI
 
-Here's a sample of the tool in action Safe Zones Overlay: https://github.com/rokudev/tv-safe-zone-overlay
+Here's a sample of the tool in action Safe Zones Overlay: https://gitlab.com/rokudev/tv-safe-zone-overlay
 
 
 ### FHD user interface requirements and recommendations

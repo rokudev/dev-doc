@@ -21,7 +21,7 @@ This object is created with no parameters:
 
 ``CreateObject("roUrlTransfer")``
 
-If using HTTPS, the developer must specify a certificate file by calling SetCertificatesFile() with a .pem file that includes the certificate authority cert (like Verisign, Thawte, etc., or your own with OpenSSL) that signed the web server certificate. This must be called before making a request. The developer can also use the Roku standard cert bundle (which contains certificates for most common signing authorities) stored in common:/certs/ca-bundle.crt; or download the CA certificate [here](https://github.com/rokudev/ca-certificate/blob/master/ca-bundle.crt).
+If using HTTPS, the developer must specify a certificate file by calling SetCertificatesFile() with a .pem file that includes the certificate authority cert (like Verisign, Thawte, etc., or your own with OpenSSL) that signed the web server certificate. This must be called before making a request. The developer can also use the Roku standard cert bundle (which contains certificates for most common signing authorities) stored in common:/certs/ca-bundle.crt; or download the CA certificate [here](https://gitlab.com/rokudev/ca-certificate/blob/master/ca-bundle.crt).
 
 The web server can authenticate that the requested connection is from a Roku Streaming Player and that the request is from your application by taking the following actions:
 

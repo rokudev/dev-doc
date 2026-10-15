@@ -40,9 +40,9 @@ The band of metrics below FILTERS shows the summary statistics based on the time
 
 Below the band of summary statistics are three visualizations. These are time-series visualizations, so at least two observation dates are required to display properly. The filters Time Grain and Time Period control how the data is displayed in the visualizations. Any conflicts between Time Grain and Time Period will prevent a visualization of the data.
 
-Click on the legend at the bottom of each visualization to view only one or multiple metrics. For instance, on Channel Visitors and Streaming Viewers you can choose to see only Bounce Rate or you can choose to see all three metrics displayed simultaneously.
+Click on the legend at the bottom of each visualization to view only one or multiple metrics. For instance, on App Visitors and Streaming Viewers you can choose to see only Bounce Rate or you can choose to see all three metrics displayed simultaneously.
 
-##### Channel Visitors and Streaming Viewers visualization
+##### App Visitors and Streaming Viewers visualization
 
 This visualization shows whether people are engaging with your content after accessing your app. After getting a visitor to install and open your app, you want them to stream content so they become viewers. Also, you want them to keep coming back so the relationship grows and becomes stickier over time.
 

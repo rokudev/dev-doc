@@ -61,4 +61,4 @@ There are three possible values for the vertAlign field:
 
 ## Sample app
 
-[ScrollingLabelExample](https://github.com/rokudev/samples/tree/master/ux%20components/text/ScrollingLabelExample) is a sample app demonstrating ScrollingLabel in action.
+[ScrollingLabelExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/text/ScrollingLabelExample) is a sample app demonstrating ScrollingLabel in action.

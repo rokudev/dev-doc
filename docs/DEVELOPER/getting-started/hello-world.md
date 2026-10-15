@@ -15,7 +15,7 @@ You can build your first Roku app by modifying Roku's Hello World sample. After 
 
 ## Viewing the directory structure
 
-To get started, [download the Hello World sample app](https://github.com/rokudev/hello-world/archive/refs/heads/master.zip) and unzip it if you have not done so already. Expand the **/hello-world-master/dist/apps/hello-world** folder to view the app's directory structure. The directory of a Roku app typically contains the following folders and files:
+To get started, [download the Hello World sample app](https://gitlab.com/rokudev/hello-world/archive/refs/heads/master.zip) and unzip it if you have not done so already. Expand the **/hello-world-master/dist/apps/hello-world** folder to view the app's directory structure. The directory of a Roku app typically contains the following folders and files:
 
 - The **components** folder contains the SceneGraph XML files that define the app's layout.
 - The **source** folder contains the main entry point for launching the app.

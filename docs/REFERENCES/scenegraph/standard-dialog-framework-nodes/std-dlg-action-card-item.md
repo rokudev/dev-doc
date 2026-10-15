@@ -294,4 +294,4 @@ This example configures an [**RSGPalette** node](doc:standard-dialog) for the di
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/standard-dialog-framework) that demonstrates how to create a custom dialog that includes action card items.
+You can download and install a [sample app](https://gitlab.com/rokudev/standard-dialog-framework) that demonstrates how to create a custom dialog that includes action card items.

@@ -238,7 +238,7 @@ list:
 </component>
 ```
 
-[MarkupList](https://github.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/MarkupListExample) is an example
+[MarkupList](https://gitlab.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/MarkupListExample) is an example
 application of the completed custom list configuration. In the example
 application, note that the file `markuplistcontent.xml` is the
 ContentNode component that supplies the data to populate the
@@ -258,13 +258,13 @@ set the remote control key focus on the custom components as needed.
 For an example application that uses three custom components, and
 creates and sets focus on the custom components as needed in reaction to
 user input in an OverhangPanelSetScene node, see [Sliding panels
-example](https://github.com/rokudev/samples/tree/master/ux%20components/sliding%20panels/OverhangPanelSetSceneExample).
+example](https://gitlab.com/rokudev/samples/tree/master/ux%20components/sliding%20panels/OverhangPanelSetSceneExample).
 
 There are two more examples that allow users to select and play videos
 from a custom RowList node:
 
-  - [Simple\_Grid\_and\_Video](https://github.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/Simple_Grid_and_Video)
-  - [Simple\_Grid\_with\_Details\_and\_Video](https://github.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/Simple_Grid_with_Details_and_Video)
+  - [Simple\_Grid\_and\_Video](https://gitlab.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/Simple_Grid_and_Video)
+  - [Simple\_Grid\_with\_Details\_and\_Video](https://gitlab.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/Simple_Grid_with_Details_and_Video)
 
 These examples download and convert a MRSS XML feed containing all the
 data for the application to a ContentNode field added to the

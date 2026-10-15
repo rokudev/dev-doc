@@ -28,7 +28,7 @@ This lesson also summarizes some of the app certification requirements for offer
 
 ### Steps required to play content
 
-To play the videos in the [Subscriptions sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/Subscriptions), you need to use the [Roku Developer Dashboard](https://developer.roku.com/developer) to create an app and then configure the app and your developer account for testing. This entails the following steps:
+To play the videos in the [Subscriptions sample app](https://gitlab.com/rokudev/scenegraph-master-sample/tree/master/Subscriptions), you need to use the [Roku Developer Dashboard](https://developer.roku.com/developer) to create an app and then configure the app and your developer account for testing. This entails the following steps:
 
 1. [Create a test app](doc:channel-publishing-guide).
 2. [Enable the app for billing testing](doc:billing-testing).
@@ -49,13 +49,13 @@ In addition, to keep the app demonstration segments in this lesson concise and m
 
 | Item                                                         | Description                                                  |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| [Subscriptions sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/Subscriptions) | Download and review the code used in this lesson to implement Roku Pay in an app. |
+| [Subscriptions sample app](https://gitlab.com/rokudev/scenegraph-master-sample/tree/master/Subscriptions) | Download and review the code used in this lesson to implement Roku Pay in an app. |
 | [Sideloading apps](doc:developer-setup) | Sideload and test the Subscriptions app created in this lesson. |
 | [SceneGraph ChannelStore node](doc:channelstore) | Read about the SceneGraph ChannelStore APIs, which are used to get subscription products from the app's catalog, pre-populate dialogs with customers' user information, purchase products, and store and retrieve user credentials. |
 | [Roku Web Service API](doc:roku-web-service) | Read about the Roku Web Service RESTful API, which you can integrate into your backend system to pull transaction data in order to validate, refund, and cancel subscriptions.  Learn how to subscribe to push notifications to deliver transaction data to your service endpoint. |
 | [Certification criteria for purchases](doc:certification) | Read the certification criteria for transactional apps (SVOD apps, TVOD apps, and other subscription services). |
 | [On-device authentication](doc:on-device-authentication) | Read how to validate subscriptions and purchases before granting access to content. Learn how to enable customers to sign-in to an app directly on their Roku devices—without having to visit an external webpage. |
-| [On-device authentication sample app](https://github.com/rokudev/on-device-authentication) | Download and test a sample app demonstrating the on-device authentication workflow. |
+| [On-device authentication sample app](https://gitlab.com/rokudev/on-device-authentication) | Download and test a sample app demonstrating the on-device authentication workflow. |
 | [In-app purchasing](doc:product-catalog) | Read how to create in-app products for the subscription and transactional services offered by your app. |
 | [Billing testing](doc:billing-testing) | Read how to enable your app for billing testing.         |
 

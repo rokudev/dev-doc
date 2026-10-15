@@ -261,4 +261,4 @@ The default appearance of the **TextEditBox** is very transparent, allowing it t
 
 ## Sample app
 
-[TextEditBoxExample](https://github.com/rokudev/samples/tree/master/ux%20components/widgets/TextEditBoxExample) is a sample app demonstrating TextEditBox in action.
+[TextEditBoxExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/widgets/TextEditBoxExample) is a sample app demonstrating TextEditBox in action.

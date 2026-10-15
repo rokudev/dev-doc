@@ -28,7 +28,7 @@ The **Scheduled releases** section of the main panel lists app releases, product
 
 <Image alt="roku815px - Scheduled releases screen shot" border={false} src="https://image.roku.com/ZHZscHItMTc2/Scheduled-Releases.png" />
 
-For an overview on in-app products, promotions, and product groups, see [Adding in-channel products](doc:product-catalog).
+For an overview on in-app products, promotions, and product groups, see [Adding in-app products](doc:product-catalog).
 
 ## What's new
 
@@ -40,7 +40,7 @@ The **What's new** section highlights important Roku platform news such as platf
 
 In addition to the utilities found on the Developer Dashboard itself, developers can also navigate to several additional tools from the left-hand navigation menu of the Developer Dashboard.
 
-### Channel
+### App
 
 The app section allows developers to manage their apps, Streaming Store listings, and Roku Search feed configurations.
 
@@ -51,7 +51,7 @@ The app section allows developers to manage their apps, Streaming Store listings
 
 The monetization section provides essential tools for Roku Pay, including the ability to configure your Roku Pay products, offers, web services, and test users.
 
-* **Product catalog:** This is the primary page for creating new in-app products for purchases in apps using Roku Pay, as well as their corresponding offers and intro pricing deals. Read the documentation on [Adding in-channel products](doc:product-catalog) for more information.
+* **Product catalog:** This is the primary page for creating new in-app products for purchases in apps using Roku Pay, as well as their corresponding offers and intro pricing deals. Read the documentation on [Adding in-app products](doc:product-catalog) for more information.
 
 * **Test users:** Here, developers can manage any Roku accounts that should have "test user" permissions for their apps, meaning these users will not be charged for any products they purchase within the designated app using Roku Pay. A valid payment method is required but purchases will not be charged. Read the documentation on [Creating test users](doc:test-users) for more information.
 

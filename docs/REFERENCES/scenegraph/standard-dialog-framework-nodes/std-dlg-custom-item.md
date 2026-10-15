@@ -31,4 +31,4 @@ The **StdDlgCustomItem** node is used to display free-form dialog items in the c
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/standard-dialog-framework) that demonstrates how to create a custom dialog that uses a custom item.
+You can download and install a [sample app](https://gitlab.com/rokudev/standard-dialog-framework) that demonstrates how to create a custom dialog that uses a custom item.

@@ -570,4 +570,4 @@ The following creates a grid of posters with two captions below each poster grap
 
 ## Sample app
 
-[PosterGridExample](https://github.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/PosterGridExample) is a sample app demonstrating PosterGrid in action.
+[PosterGridExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/PosterGridExample) is a sample app demonstrating PosterGrid in action.

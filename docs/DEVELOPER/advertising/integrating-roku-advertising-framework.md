@@ -292,7 +292,7 @@ done using one of the methods described above.
 
 ##### Example
 
-For examples, see the [Roku Advertising sample apps](https://github.com/rokudev/samples/tree/master/advertising)
+For examples, see the [Roku Advertising sample apps](https://gitlab.com/rokudev/samples/tree/master/advertising)
 
 ### Just in Time (JIT) midroll ad retrieval
 
@@ -447,7 +447,7 @@ adIface.setAdBufferScreenLayer(2, layers)
 <Image alt="roku815px - integrateraf3" border={false} src="https://image.roku.com/ZHZscHItMTc2/integrateraf3.jpg" title="integrateraf3" />
 
 For an example on different custom buffering screen implementations,
-see [CustomBufferScreenSceneGraphSample](https://github.com/rokudev/samples/tree/master/advertising).
+see [CustomBufferScreenSceneGraphSample](https://gitlab.com/rokudev/samples/tree/master/advertising).
 
 ### Custom ad parsing and rendering
 

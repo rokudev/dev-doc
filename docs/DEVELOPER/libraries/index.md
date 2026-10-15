@@ -441,5 +441,5 @@ components.
 
 | Model           | Download                                                                                  |
 | :-------------- | :---------------------------------------------------------------------------------------- |
-| Simple model #1 | [RokuAnalyticsComponent_Model1](https://github.com/rokudev/samples/tree/master/analytics) |
-| Simple model #2 | [RokuAnalyticsComponent_Model2](https://github.com/rokudev/samples/tree/master/analytics) |
+| Simple model #1 | [RokuAnalyticsComponent_Model1](https://gitlab.com/rokudev/samples/tree/master/analytics) |
+| Simple model #2 | [RokuAnalyticsComponent_Model2](https://gitlab.com/rokudev/samples/tree/master/analytics) |

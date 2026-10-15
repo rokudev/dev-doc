@@ -67,4 +67,4 @@ Only a single dialog may appear at any time. If a second dialog is shown, the pr
 
 ## Sample app
 
-[DialogExample](https://github.com/rokudev/samples/tree/master/ux%20components/dialogs/DialogExample) is a sample app demonstrating Dialog in action.
+[DialogExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/dialogs/DialogExample) is a sample app demonstrating Dialog in action.

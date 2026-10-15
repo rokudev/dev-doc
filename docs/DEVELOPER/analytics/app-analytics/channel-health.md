@@ -33,8 +33,8 @@ The filters applied to this report are:
 
 The band of metrics below FILTERS shows the summary statistics based on what you select in FILTERS:
 
-  - **Devices with Channel Crashes** - percentage of unique devices that have streamed in your app which have experienced a BrightScript crash in the selected Time Period; the lower, the better
-  - **Channel Crashes per Streaming Hour** - count of BrightScript crashes normalized for total streaming hours; the lower the better
+  - **Devices with App Crashes** - percentage of unique devices that have streamed in your app which have experienced a BrightScript crash in the selected Time Period; the lower, the better
+  - **App Crashes per Streaming Hour** - count of BrightScript crashes normalized for total streaming hours; the lower the better
   - **Average Video Start Time (seconds)** - average time required for video content to start streaming; the lower, the better
   - **Average Bitrate (Megabits)** - the average number of bits per second streamed in your app; the higher, the better
   - **Average Rebuffers per Device** - average number of rebuffers per unique device that has streamed in your app; the fewer, the better
@@ -47,11 +47,11 @@ Features](doc:hardware) for the list of hardware and model numbers.
 
 Click on the legend at the bottom of each visualization to view only one or multiple metrics.  
 
-##### Channel Crashes by Product visualization
+##### App Crashes by Product visualization
 
 This visualization shows the number of app crashes on the devices that have streamed in the sample time period. The left vertical axis is for the total number of BrightScript crashes while the right vertical axis is for the average number of crashes per streaming hour.
 
-##### Devices with Channel Crashes by Product visualization
+##### Devices with App Crashes by Product visualization
 
 This visualization shows the number of crashes on each type of device that has streamed in the sample time period. The left vertical axis is for the number of unique devices that experienced a BrightScript crash in the selected time period, while the right vertical axis is for the percentage of all device streaming in your app that experienced a BrightScript crash in the selected time period.
 

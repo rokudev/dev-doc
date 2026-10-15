@@ -27,7 +27,7 @@ To run App Behavior Analysis testing on authenticated apps, developers must firs
 * [Provide deep link parameters](doc:channel-publishing-guide).
 * [Write automated sign-in and sign-out scripts](#writing-automated-sign-in-and-sign-out-scripts).
 
-This document demonstrates how to write these scripts with the [Roku Remote tool](http://devtools.web.roku.com/RokuRemote/) for signing in to the [on-device authentication sample app](https://github.com/rokudev/on-device-authentication) and signing out.
+This document demonstrates how to write these scripts with the [Roku Remote tool](http://devtools.web.roku.com/RokuRemote/) for signing in to the [on-device authentication sample app](https://gitlab.com/rokudev/on-device-authentication) and signing out.
 
 ## Writing automated sign-in and sign-out scripts
 
@@ -57,7 +57,7 @@ To create the automated sign-in script, follow these steps:
 
    <Image alt="roku600px - roku-remote-launch-channel" border={false} src="https://image.roku.com/ZHZscHItMTc2/roku-remote-launch-channel-v1.png" />
 
-2. Use the keypad on the left side to sign in to the app. As you click a button, a "press" step with the name of the button is added to the script. The complexity of the script varies based on the screens and required navigation in the sign-in flow. The following image demonstrates the initial sequence of keypresses used to sign in to the [on-device authentication sample app](https://github.com/rokudev/on-device-authentication):
+2. Use the keypad on the left side to sign in to the app. As you click a button, a "press" step with the name of the button is added to the script. The complexity of the script varies based on the screens and required navigation in the sign-in flow. The following image demonstrates the initial sequence of keypresses used to sign in to the [on-device authentication sample app](https://gitlab.com/rokudev/on-device-authentication):
 
    <Image alt="roku815px - roku-remote-steps" border={false} src="https://image.roku.com/ZHZscHItMTc2/roku-remote-steps-v2.png" />
 
@@ -84,7 +84,7 @@ To create the automated sign-in script, follow these steps:
 
    <Image alt="roku815px - roku-remote-export-script" border={false} src="https://image.roku.com/ZHZscHItMTc2/roku-remote-export-script-v1.png" />
 
-   You can [download the sign-in script](https://github.com/rokudev/on-device-authentication) used for the on-device authentication sample and test it. This also provides a quick reference to help write your script. To import the script into the Roku Remote Tool, click **New Script**, click **Import from**, and then select the script. This sample app does not include a sign-out flow, so no sample sign-out script is included.
+   You can [download the sign-in script](https://gitlab.com/rokudev/on-device-authentication) used for the on-device authentication sample and test it. This also provides a quick reference to help write your script. To import the script into the Roku Remote Tool, click **New Script**, click **Import from**, and then select the script. This sample app does not include a sign-out flow, so no sample sign-out script is included.
 
    <Image alt="roku815px - roku-remote-import" border={false} src="https://image.roku.com/ZHZscHItMTc2/roku-remote-import-v1.png" />
 
@@ -146,13 +146,13 @@ To run App Behavior Analysis testing on an authenticated app, follow these steps
 
 ## Sample app
 
-You can [download the on-device authentication sample app ](https://github.com/rokudev/on-device-authentication)and [sideload it on your Roku device](doc:developer-setup) to test the certification flow for authenticated apps. The sample app includes a **rasp** folder with sign-in and sign-out scripts that you can import and run in the Roku Remote tool. You can run certification testing on the app following these steps:
+You can [download the on-device authentication sample app ](https://gitlab.com/rokudev/on-device-authentication)and [sideload it on your Roku device](doc:developer-setup) to test the certification flow for authenticated apps. The sample app includes a **rasp** folder with sign-in and sign-out scripts that you can import and run in the Roku Remote tool. You can run certification testing on the app following these steps:
 
-1. Open the [Developer Dashboard](https://developer.roku.com/developer), click **Manage My Apps**, click **Add Channel**, and then create a new SDK app.
+1. Open the [Developer Dashboard](https://developer.roku.com/developer), click **Manage My Apps**, click **Add App**, and then create a new SDK app.
 
 2. Complete the **Properties** and **Channel store info** pages. There are no specific requirements for completing these pages in order to run the sample app.
 
-3. In the **Monetization** page, select the **My app contains in-channel subscriptions** check box.
+3. In the **Monetization** page, select the **My app contains in-app subscriptions** check box.
 
 4. [Package the sample app with the Packager tool in the Development Application Installer](doc:packaging-channels), and then upload the package in the Developer Dashboard **Package** **Upload** page.
 

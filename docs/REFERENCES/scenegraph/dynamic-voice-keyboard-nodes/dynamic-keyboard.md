@@ -36,4 +36,4 @@ The DynamicKeyboard node inherits all its fields from its parent [DynamicKeyboar
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/dynamic-voice-enabled-keyboards) that demonstrates how to create and configure a dynamic voice-enabled keyboard.
+You can download and install a [sample app](https://gitlab.com/rokudev/dynamic-voice-enabled-keyboards) that demonstrates how to create and configure a dynamic voice-enabled keyboard.

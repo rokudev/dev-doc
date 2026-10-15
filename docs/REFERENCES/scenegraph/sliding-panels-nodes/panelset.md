@@ -71,4 +71,4 @@ The PanelSet node assumes that:
 | isGoingBack   | Boolean | false   | READ_ONLY         | Set to true when the PanelSet node panels are sliding right, *back* towards the original home position, as a result of a **Left** or **Back** key press. |
 
 ## Sample app	
-[PanelSetExample](https://github.com/rokudev/samples/tree/master/ux%20components/sliding%20panels/PanelSetExample) is a sample app demonstrating PanelSet in action.
+[PanelSetExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/sliding%20panels/PanelSetExample) is a sample app demonstrating PanelSet in action.

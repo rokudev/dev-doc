@@ -45,7 +45,7 @@ and exposes a single `dictationParams` signal filtered to
 `command: "dictation"` events.
 
 Firmware routes recognized dictation through the voice input handler, so that
-is the channel this hook watches.
+is the app this hook watches.
 
 Each dictation event — every phase, `start` / `text` / `end` — is acknowledged
 with `updateVoiceInputStatus({ status: "success" })` as soon as it arrives;

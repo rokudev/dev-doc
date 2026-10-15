@@ -41,4 +41,4 @@ When a Button node is created that is not a child of a ButtonGroup node, typical
 | buttonSelected          | Event   | N/A        | READ_ONLY       | The buttonSelected field is set whenever the button is selected. The field should be used to call observer callback functions when the button is selected |
 
 ## Sample app	
-[ButtonExample](https://github.com/rokudev/samples/tree/master/ux%20components/widgets/ButtonExample) is a sample app demonstrating Button in action.
+[ButtonExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/widgets/ButtonExample) is a sample app demonstrating Button in action.

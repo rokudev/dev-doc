@@ -185,11 +185,11 @@ To update your app with the new **DoOrder** API, follow these steps:
 
    ## Sample app
 
-   You can download and install a [sample app](https://github.com/rokudev/samples/tree/master/roku%20paytvod-catalog-2) that demonstrates how to handle transactional purchases using the new the new **DoOrder** ChannelStore API.
+   You can download and install a [sample app](https://gitlab.com/rokudev/samples/tree/master/roku%20paytvod-catalog-2) that demonstrates how to handle transactional purchases using the new the new **DoOrder** ChannelStore API.
 
    ## Appendix A: TVOD API Reference (Catalog 2.0)
 
-   The new version of the **DoOrder** API uses Roku's generic request framework, which enables developers to pass the ChannelStore command, parameters, and context into a single **request** object (an associative array). The result of the request is encapsulated in a **requestStatus** object (also an associative array), which includes the status of the request and the data returned by it. Channels must observe the **requestStatus** field to be notified of changes and fire a callback function to parse and process the Channel Store API commands.
+   The new version of the **DoOrder** API uses Roku's generic request framework, which enables developers to pass the ChannelStore command, parameters, and context into a single **request** object (an associative array). The result of the request is encapsulated in a **requestStatus** object (also an associative array), which includes the status of the request and the data returned by it. Apps must observe the **requestStatus** field to be notified of changes and fire a callback function to parse and process the Channel Store API commands.
 
    ### Generic Framework Request Status
 

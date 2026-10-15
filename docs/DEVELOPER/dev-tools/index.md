@@ -60,7 +60,7 @@ For a step-by-step walkthrough, see [Packaging Roku Apps](doc:packaging-channels
 
 ## SceneGraph Developer Extensions
 
-[SceneGraph Developer Extensions](https://github.com/rokudev/SceneGraphDeveloperExtensions#scene-graph-developer-extensions) (SGDEX) is a collection of developer sample code that demonstrates how a developer can use pre-built, reusable Roku SceneGraph (RSG) components to enable rapid development of apps that follow a consistent UX paradigm.
+[SceneGraph Developer Extensions](https://gitlab.com/rokudev/SceneGraphDeveloperExtensions#scene-graph-developer-extensions) (SGDEX) is a collection of developer sample code that demonstrates how a developer can use pre-built, reusable Roku SceneGraph (RSG) components to enable rapid development of apps that follow a consistent UX paradigm.
 
 ## Roku Remote Web Tool
 

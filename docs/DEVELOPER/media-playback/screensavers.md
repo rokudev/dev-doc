@@ -80,4 +80,4 @@ You can also create screensavers in Roku SceneGraph. You should **not** create S
 
 ### Screensaver examples
 
-See the [screensaver sample channels](https://github.com/rokudev/samples/tree/master/screen%20savers) for examples.
+See the [screensaver sample apps](https://gitlab.com/rokudev/samples/tree/master/screen%20savers) for examples.

@@ -170,7 +170,7 @@ The Roku OS can measure and record eight app performance metrics: app launch, ap
       <td>Roku OS</td>
     </tr>
     <tr>
-      <td>Channel exit</td>
+      <td>App exit</td>
       <td>The user presses the Home button to exit an app.</td>
       <td>The app has exited and the home screen is fully rendered and operational.</td>
       <td><strong>AppExitInitiated</strong><br /><br />The home key handler engages app shutdown.</td>

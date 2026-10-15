@@ -114,4 +114,4 @@ m.top.grid = grid
 If the grid's data includes sections and the GridPanel's showSectionLabel's field is set to true, the title field of the section's ContentNode will be used as the text for the left label of the GridPanel.
 
 ## Sample app
-[GridPanelExample](https://github.com/rokudev/samples/tree/master/ux%20components/sliding%20panels/GridPanelExample) is a sample app demonstrating GridPanel in action.
+[GridPanelExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/sliding%20panels/GridPanelExample) is a sample app demonstrating GridPanel in action.

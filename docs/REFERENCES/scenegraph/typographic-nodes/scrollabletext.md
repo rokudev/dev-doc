@@ -71,4 +71,4 @@ In most cases, the vertAlign field should remain set to top.
 
 ## Sample app
 
-[ScrollableTextExample](https://github.com/rokudev/samples/tree/master/ux%20components/text/ScrollableTextExample) is a sample app demonstrating ScrollableText in action.
+[ScrollableTextExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/text/ScrollableTextExample) is a sample app demonstrating ScrollableText in action.

@@ -54,4 +54,4 @@ m.MultiStyleLabel.text = "Default Text <HandprintedRed>Red text followed by</Han
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/MultiStyleLabelExample) that demonstrates how to use the MultiStyleLabel node.
+You can download and install a [sample app](https://gitlab.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/MultiStyleLabelExample) that demonstrates how to use the MultiStyleLabel node.

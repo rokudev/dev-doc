@@ -52,4 +52,4 @@ When creating your own keyboard background artwork, you must maintain the size o
 | focusVisible        | boolean | true       | READ_WRITE        | Specifies whether or not focused key is visible when PinPad is created |
 
 ## Sample app	
-[PinpadExample](https://github.com/rokudev/samples/tree/master/ux%20components/widgets/PinPadExample) is a sample app demonstrating Pinpad in action.
+[PinpadExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/widgets/PinPadExample) is a sample app demonstrating Pinpad in action.

@@ -36,13 +36,13 @@ This lesson concludes by demonstrating how to use the Roku Deep Linking Tester a
 
 To keep the app demonstration segments in this lesson concise and make them more comprehensible, the pre-roll ads that you will see when deep linking into content in the sample app have been edited out.
 
-As described in the [document for the Subscriptions video](doc:subscriptions), you need to create an app and then configure the app and your developer account for testing in order to play the videos in the [Deep linking sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/DeepLinking).
+As described in the [document for the Subscriptions video](doc:subscriptions), you need to create an app and then configure the app and your developer account for testing in order to play the videos in the [Deep linking sample app](https://gitlab.com/rokudev/scenegraph-master-sample/tree/master/DeepLinking).
 
 ## Resources
 
 | Item                                                         | Description                                                  |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| [Deep linking sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/DeepLinking) | Download and review the code used in this lesson to accept and process deep links into an app. |
+| [Deep linking sample app](https://gitlab.com/rokudev/scenegraph-master-sample/tree/master/DeepLinking) | Download and review the code used in this lesson to accept and process deep links into an app. |
 | [Sideloading apps](doc:developer-setup) | Sideload and test the DeepLinking app created in this lesson. |
 | [Deep linking implementation guide](doc:implementing-deep-linking) | Read how to implement deep linking in an app. This document highlights how deep linking works, details the required app behavior based on the media type included in the deep link, and provides code samples demonstrating how to handle deep links upon launching the app and while it is already running. It explains how to use the Deep Linking Tester and cURL commands to verify that an app is programmed correctly to handle deep links. |
 | [Certification criteria for deep linking](doc:certification) | Read the certification criteria for handling deep links in an app. |

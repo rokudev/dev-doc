@@ -631,4 +631,4 @@ Note that the fields are updated in the order presented in the table below. Most
 
 ## Sample app
 
-[zoomRowListDefaultLayoutTest](https://github.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/zoomRowListDefaultLayoutTest) is a sample app demonstrating the ZoomRowList in action.
+[zoomRowListDefaultLayoutTest](https://gitlab.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/zoomRowListDefaultLayoutTest) is a sample app demonstrating the ZoomRowList in action.

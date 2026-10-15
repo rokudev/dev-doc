@@ -53,13 +53,13 @@ playback. They also show how to load and parse an MRSS feed so you can
 see how to populate your apps with dynamic
 content.
 
-* [Simple_Grid_and_Video](https://github.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/Simple_Grid_with_Details_and_Video)
-* [Simple_Grid_with_Details_and_Video](https://github.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/Simple_Grid_with_Details_and_Video)
+* [Simple_Grid_and_Video](https://gitlab.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/Simple_Grid_with_Details_and_Video)
+* [Simple_Grid_with_Details_and_Video](https://gitlab.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/Simple_Grid_with_Details_and_Video)
 
 Here is another example application that uses the same content feed, but
 renders the UI as a PanelSet.
 
-* [PanelSet_and_Video](https://github.com/rokudev/samples/blob/master/media/PanelSet_and_Video)
+* [PanelSet_and_Video](https://gitlab.com/rokudev/samples/blob/master/media/PanelSet_and_Video)
 
 And here is a simple example using the same basic content with
 a LabelList node for selecting the video to play. The XML file
@@ -71,7 +71,7 @@ translated into a ContentNode, which supplies the items
 displayed in the LabelList node, and then how the video is played
 when the user selects a video from the list.
 
-* [VideoList](https://github.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/VideoList)
+* [VideoList](https://gitlab.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/VideoList)
 
 ## Setting focus on the video node
 
@@ -223,7 +223,7 @@ m.videoPlayer.control = "start"
 If the user has taken a few seconds to read the details screen, the
 video will start immediately after the playback button is pressed.  An
 sample app demonstrating Fast Video Start can be found
-here: [FastVideoStart](https://github.com/rokudev/samples/blob/master/media/FastVideoStart).
+here: [FastVideoStart](https://gitlab.com/rokudev/samples/blob/master/media/FastVideoStart).
 
 ## MPEG-4 playback
 
@@ -288,7 +288,7 @@ in the same manner as the internal ProgressBar nodes
 
 Adding closed caption support is a simple matter of configuring the
 subtitleconfig video node content element.
-See [SceneGraphCaptionsDemo](https://github.com/rokudev/samples/blob/master/media/SceneGraphCaptionsDemo) for
+See [SceneGraphCaptionsDemo](https://gitlab.com/rokudev/samples/blob/master/media/SceneGraphCaptionsDemo) for
 an example of using side loaded TTML captions in your
 app.
 
@@ -418,9 +418,9 @@ section.
 
 | Sample App                                                                                                                                                  | Description                                                   |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------ |
-| [Simple_Grid_and_Video](https://github.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/Simple_Grid_and_Video)                           | Video player in a simple grid UI.                             |
-| [Simple_Grid_with_Details_and_Video](https://github.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/Simple_Grid_with_Details_and_Video) | Video player in a simple grid UI with details page.           |
-| [PanelSet_and_Video](https://github.com/rokudev/samples/blob/master/media/PanelSet_and_Video)                                                               | Video player in a simple PanelSet UI.                         |
-| [VideoList](https://github.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/VideoList)                                                   | Video player with content selected from a LabelList.          |
-| [FastVideoStart](https://github.com/rokudev/samples/blob/master/media/FastVideoStart)                                                                       | Sample demonstrating how to use Fast Video Start.             |
-| [SceneGraphCaptionsDemo](https://github.com/rokudev/samples/blob/master/media/SceneGraphCaptionsDemo)                                                       | Sample demonstrating how to integrate closed caption support. |
+| [Simple_Grid_and_Video](https://gitlab.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/Simple_Grid_and_Video)                           | Video player in a simple grid UI.                             |
+| [Simple_Grid_with_Details_and_Video](https://gitlab.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/Simple_Grid_with_Details_and_Video) | Video player in a simple grid UI with details page.           |
+| [PanelSet_and_Video](https://gitlab.com/rokudev/samples/blob/master/media/PanelSet_and_Video)                                                               | Video player in a simple PanelSet UI.                         |
+| [VideoList](https://gitlab.com/rokudev/samples/blob/master/ux%20components/lists%20and%20grids/VideoList)                                                   | Video player with content selected from a LabelList.          |
+| [FastVideoStart](https://gitlab.com/rokudev/samples/blob/master/media/FastVideoStart)                                                                       | Sample demonstrating how to use Fast Video Start.             |
+| [SceneGraphCaptionsDemo](https://gitlab.com/rokudev/samples/blob/master/media/SceneGraphCaptionsDemo)                                                       | Sample demonstrating how to integrate closed caption support. |

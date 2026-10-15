@@ -75,7 +75,7 @@ To use the Roku Event Dispatcher in your app's authentication workflow to send a
 
 3. Use the [debug console](doc:debugging) to verify that your app is sending authentication events.
 
-![roku815px - Search results for an authenticated channel that isn't using the Roku Event Dispatcher](https://image.roku.com/ZHZscHItMTc2/red-3.jpg "red-3")
+![roku815px - Search results for an authenticated app that isn't using the Roku Event Dispatcher](https://image.roku.com/ZHZscHItMTc2/red-3.jpg "red-3")
 
 ### Integrating the RAF fireRokuMarketingPixel() method in the authentication workflow
 

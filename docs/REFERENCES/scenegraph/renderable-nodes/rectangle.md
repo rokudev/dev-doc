@@ -66,4 +66,4 @@ Rotation of Rectangles is supported. On platforms that do not support OpenGL, on
 
 ## Sample app
 
-[RectangleExample](https://github.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/RectangleExample) is a sample app demonstrating Rectangle in action.
+[RectangleExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/RectangleExample) is a sample app demonstrating Rectangle in action.

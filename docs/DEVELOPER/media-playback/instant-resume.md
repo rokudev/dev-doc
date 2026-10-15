@@ -239,6 +239,6 @@ end sub
 
 ## Sample app
 
-If your device is running [Roku OS 10.0](doc:release-notes#roku-os-100) (or later), you can download and install a [sample app](https://github.com/rokudev/instant-resume) that demonstrates how to implement Instant Resume in an app. You can customize the handling of suspend and resume events in the sample to meet your app's needs.
+If your device is running [Roku OS 10.0](doc:release-notes#roku-os-100) (or later), you can download and install a [sample app](https://gitlab.com/rokudev/instant-resume) that demonstrates how to implement Instant Resume in an app. You can customize the handling of suspend and resume events in the sample to meet your app's needs.
 
 The `onMainSceneSuspend()` and `onMainSceneResume()` methods shown in the VOD playback code sample are taken from the **components/UILogic/VideoPlayerLogic.brs** file in the sample app. They are used as the controlling the `customSuspend()` and `customResume()` methods in the **components/MainScene.xml** file.

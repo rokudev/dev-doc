@@ -51,7 +51,7 @@ In the demo of the App Behavior Analysis tool, the video uses the SceneGraph Dev
       <td>Purchase Roku devices for your hardware test suite.</td>
     </tr>
     <tr>
-      <td><a href="https://github.com/rokudev/automated-channel-testing">Roku test automation software</a></td>
+      <td><a href="https://gitlab.com/rokudev/automated-channel-testing">Roku test automation software</a></td>
       <td>Download Roku's test automation</td>
     </tr>
     <tr>

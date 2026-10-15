@@ -300,7 +300,7 @@ If you have the Administrator role (or are the root account owner), you can acce
 
 The log lists the user’s email address, page they accessed, action taken, subject app or content, and the date and time of the action.
 
-You can search log entries by email address, page name, action, or app name, and you can sort the entries by clicking the **Email**, **Page**, and **Channel**, and **Date** headers.
+You can search log entries by email address, page name, action, or app name, and you can sort the entries by clicking the **Email**, **Page**, and **App**, and **Date** headers.
 
 ![roku815px - multi-user-access-2-roles-access](https://image.roku.com/ZHZscHItMTc2/multi-user-access-2-activity-logs-page.png)
 

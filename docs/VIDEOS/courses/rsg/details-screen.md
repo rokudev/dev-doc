@@ -24,7 +24,7 @@ This lesson describes how to build a Details Screen using more complex component
 
 | Item                                                         | Description                                                  |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| [Details Screen sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/DetailsScreen) | Download and review the code used in this lesson to create a details screen. |
+| [Details Screen sample app](https://gitlab.com/rokudev/scenegraph-master-sample/tree/master/DetailsScreen) | Download and review the code used in this lesson to create a details screen. |
 | [Sideloading  Roku apps](doc:developer-setup) | Sideload and test the Details Screen app created in this lesson. |
 
 ## Related

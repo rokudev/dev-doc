@@ -43,4 +43,4 @@ When creating your own keyboard background artwork, you must maintain the size o
 - [FHD Keyboard Template](https://image.roku.com/ZHZscHItMTc2/FHDKeyboardTemplate.png "FHD Keyboard Template")
 
 ## Sample app	
-[KeyboardExample](https://github.com/rokudev/samples/tree/master/ux%20components/widgets/KeyboardExample) is a sample app demonstrating Keyboard in action.
+[KeyboardExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/widgets/KeyboardExample) is a sample app demonstrating Keyboard in action.

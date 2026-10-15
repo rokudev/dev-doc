@@ -560,4 +560,4 @@ The following sample demonstrates a Key Definition File that defines five grids 
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/dynamic-voice-enabled-keyboards) that demonstrates how to create and configure a dynamic voice-enabled custom keyboard (an address keyboard form). This sample include an example KDF file that specifies the layout of this custom keyboard.
+You can download and install a [sample app](https://gitlab.com/rokudev/dynamic-voice-enabled-keyboards) that demonstrates how to create and configure a dynamic voice-enabled custom keyboard (an address keyboard form). This sample include an example KDF file that specifies the layout of this custom keyboard.

@@ -953,11 +953,11 @@ expect(poster).to.equal('poster.png')
 
 ## Sample test cases
 
-The [Roku automated app testing repository](https://github.com/rokudev/automated-channel-testing) includes a set of sample JavaScript test cases that can be executed on their corresponding [SceneGraph Developer Extensions (SGDEX) sample apps](https://github.com/rokudev/SceneGraphDeveloperExtensions/tree/master/samples). For example, you can execute the SGDEX GridView test case (**test_3_Grid.js**), which will sideload the corresponding sample app (**3_Grid**) on your device, and then view the test output. You can reference these samples when developing test scripts for the automated testing of your development apps.
+The [Roku automated app testing repository](https://gitlab.com/rokudev/automated-channel-testing) includes a set of sample JavaScript test cases that can be executed on their corresponding [SceneGraph Developer Extensions (SGDEX) sample apps](https://gitlab.com/rokudev/SceneGraphDeveloperExtensions/tree/master/samples). For example, you can execute the SGDEX GridView test case (**test_3_Grid.js**), which will sideload the corresponding sample app (**3_Grid**) on your device, and then view the test output. You can reference these samples when developing test scripts for the automated testing of your development apps.
 
 > Before running a sample test case, you need to update the **sideload** command in the test case with the Roku device password.
 
-The [**test_basic.js** sample](https://github.com/rokudev/automated-channel-testing/blob/master/jsLibrary/tests/test_basic.js) demonstrates how to create a simple test case that checks whether a user is authenticated before playing content using the Roku JavaScript Library:
+The [**test_basic.js** sample](https://gitlab.com/rokudev/automated-channel-testing/blob/master/jsLibrary/tests/test_basic.js) demonstrates how to create a simple test case that checks whether a user is authenticated before playing content using the Roku JavaScript Library:
 
 ```javascript
 const rokuLibrary = require("../library/rokuLibrary");

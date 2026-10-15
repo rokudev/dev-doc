@@ -134,4 +134,4 @@ The Panel node is used to create sliding panels for app UI, similar to those in 
 
 
 ## Sample app
-[PanelExample](https://github.com/rokudev/samples/tree/master/ux%20components/sliding%20panels/PanelExample) is a sample app demonstrating Panel in action.
+[PanelExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/sliding%20panels/PanelExample) is a sample app demonstrating Panel in action.

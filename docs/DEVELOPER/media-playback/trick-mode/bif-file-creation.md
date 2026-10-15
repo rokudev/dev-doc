@@ -30,7 +30,7 @@ After you have Xcode and Homebrew installed, open your terminal application and 
 $ brew install ffmpeg
 ```
 
-**Download and unzip: [biftool_mac](https://github.com/rokudev/samples/tree/master/utilities/bif%20tool/biftool_mac.zip)**
+**Download and unzip: [biftool_mac](https://gitlab.com/rokudev/samples/tree/master/utilities/bif%20tool/biftool_mac.zip)**
 
 ## Linux installation
 
@@ -40,7 +40,7 @@ $ brew install ffmpeg
 
 On RedHat and Fedora Core, you can typically install `ffmpeg-lib` by running this yum command as root: `$ yum install ffmpeg-libs`
 
-**Download and unzip: [biftool_linux](https://github.com/rokudev/samples/tree/master/utilities/bif%20tool/biftool_linux.zip)**
+**Download and unzip: [biftool_linux](https://gitlab.com/rokudev/samples/tree/master/utilities/bif%20tool/biftool_linux.zip)**
 
 The executables are compiled for **Linux x86 64-bit machines**. Make sure that the `biftool` and `biftool_processor` executables are in the same directory on the development machine.
 
@@ -63,7 +63,7 @@ Success: ./fileSequence0000-sd.bif (size=3.920MiB, numImages=915, avgSize=4.378K
 
 ## Windows installation
 
-**Download and unzip: [biftool_windows](https://github.com/rokudev/samples/tree/master/utilities/bif%20tool/biftool_windows.zip)**
+**Download and unzip: [biftool_windows](https://gitlab.com/rokudev/samples/tree/master/utilities/bif%20tool/biftool_windows.zip)**
 
 ### Windows usage
 
@@ -263,4 +263,4 @@ $ % j=00000000.jpg; for i in *; do mv ${i} ${j}; j=${i}; done;
 
 ## Sample apps
 
-You can download and install [sample channels](https://github.com/rokudev/trickplay-sample-apps) that demonstrate different ways to incorporate thumbnails from BIF files for trick play purposes.
+You can download and install [sample apps](https://gitlab.com/rokudev/trickplay-sample-apps) that demonstrate different ways to incorporate thumbnails from BIF files for trick play purposes.

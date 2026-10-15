@@ -10,7 +10,7 @@ metadata:
 next:
   description: ''
 ---
-Once you [get a Roku device](https://www.roku.com/products/players) and [enroll in the Roku developer program](https://developer.roku.com/enrollment/standard), you can put your device in developer mode, sideload apps using the Roku web plug-in, and then [run sample apps](https://github.com/rokudev/) and test and debug your app.
+Once you [get a Roku device](https://www.roku.com/products/players) and [enroll in the Roku developer program](https://developer.roku.com/enrollment/standard), you can put your device in developer mode, sideload apps using the Roku web plug-in, and then [run sample apps](https://gitlab.com/rokudev/) and test and debug your app.
 
 To activate developer mode on your Roku device, follow these steps:
 
@@ -36,7 +36,7 @@ Sideloading is how you install apps on your Roku device outside of adding them f
 
    <Image alt="roku600px dev-app-installer" border={false} src="https://image.roku.com/ZHZscHItMTc2/dev-app-installer-squashfs-v3.png" />
 
-4. [Download the Roku Hello World sample app](https://github.com/rokudev/hello-world/archive/refs/heads/master.zip), and then extract the archive.
+4. [Download the Roku Hello World sample app](https://gitlab.com/rokudev/hello-world/archive/refs/heads/master.zip), and then extract the archive.
 
 5. In the Development Application Installer, click **Upload**, and then select the **hello-world-master/dist/apps/hello-world.zip** file.  Select the type of compression you want to use for loading the app: **squashfs** or **zip**. Select **squashfs** for faster sideloading.
 

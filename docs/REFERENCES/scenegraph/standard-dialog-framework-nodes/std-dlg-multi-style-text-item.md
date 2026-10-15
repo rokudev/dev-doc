@@ -129,4 +129,4 @@ In this example, two drawing styles named "default" and "url" have been defined 
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/standard-dialog-framework) that demonstrates how to create a custom dialog that includes a **StdDlgMultiStyleTextItem** node.
+You can download and install a [sample app](https://gitlab.com/rokudev/standard-dialog-framework) that demonstrates how to create a custom dialog that includes a **StdDlgMultiStyleTextItem** node.

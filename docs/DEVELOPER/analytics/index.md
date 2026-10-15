@@ -68,7 +68,7 @@ To open an app analytics report, follow these steps:
 
 2. Click the tab for the report you want to view (the **App Health** report is selected by default).
 
-3. Select the app you want to analyze from the drop-down list. Alternatively, you can click **Public channels** or **Beta app** and then click the analytics icon for the app or select an app and then click **View analytics**.
+3. Select the app you want to analyze from the drop-down list. Alternatively, you can click **Public apps** or **Beta app** and then click the analytics icon for the app or select an app and then click **View analytics**.
 
    ![roku815px - analytics-report-tabs](https://image.roku.com/ZHZscHItMTc2/channel-stability-report-v4.png "analytics-report-tabs")
 

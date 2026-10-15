@@ -17,10 +17,10 @@ To demonstrate the various methods of creating and configuration SceneGraph node
 
 | **File**                                                                                                                           | **Application**                                                                                    |
 | :--------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------- |
-| [RectangleMU](https://github.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/BrightScript_XML_Equivalents)   | XML markup of node attributes                                                                      |
-| [RectangleBRS](https://github.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/BrightScript_XML_Equivalents) | BrightScript setting of node attributes                                                            |
-| [RectangleAA](https://github.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/BrightScript_XML_Equivalents)   | Node attributes set in BrightScript from an associative array                                      |
-| [RectangleTN](https://github.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/BrightScript_XML_Equivalents)   | Node attributes set in BrightScript from attributes downloaded from a server using a **Task** node |
+| [RectangleMU](https://gitlab.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/BrightScript_XML_Equivalents)   | XML markup of node attributes                                                                      |
+| [RectangleBRS](https://gitlab.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/BrightScript_XML_Equivalents) | BrightScript setting of node attributes                                                            |
+| [RectangleAA](https://gitlab.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/BrightScript_XML_Equivalents)   | Node attributes set in BrightScript from an associative array                                      |
+| [RectangleTN](https://gitlab.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/BrightScript_XML_Equivalents)   | Node attributes set in BrightScript from attributes downloaded from a server using a **Task** node |
 
 First, a component that uses XML markup exclusively:
 

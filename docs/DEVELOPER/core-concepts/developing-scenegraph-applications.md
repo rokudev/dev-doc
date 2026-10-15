@@ -35,7 +35,7 @@ subdirectories and files:
 Name this directory for the application it will contain, such as VideoStore. In most cases
 you will probably just copy an existing application directory (such as
 provided for the [SceneGraph XML
-Tutorial](https://github.com/rokudev/samples/tree/master/getting%20started/SceneGraphTutorial)), and modify, add, and
+Tutorial](https://gitlab.com/rokudev/samples/tree/master/getting%20started/SceneGraphTutorial)), and modify, add, and
 rename files and directories for your new application, as described
 below.
 
@@ -240,7 +240,7 @@ BrightScript code for your SceneGraph application can be found in:
 
   - [SceneGraph core
     concepts](doc:core-concepts)
-  - [SceneGraph Samples](https://github.com/rokudev/samples/tree/master/ux%20components)
+  - [SceneGraph Samples](https://gitlab.com/rokudev/samples/tree/master/ux%20components)
   - [SceneGraph API
     reference](doc:init)
 

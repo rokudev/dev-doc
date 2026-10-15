@@ -181,4 +181,4 @@ You can learn how to link the content metadata in your app's feed to a ContentNo
 
 ## Sample app
 
-[ContentNodeExample](https://github.com/rokudev/samples/tree/master/ux%20components/control/ContentNodeExample) is a sample app demonstrating ContentNode in action.
+[ContentNodeExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/control/ContentNodeExample) is a sample app demonstrating ContentNode in action.

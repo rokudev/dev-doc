@@ -32,7 +32,7 @@ The Sales Activity Report displays only a tabular grid, in which each row repres
 
 * **Transaction Currency Code** – The currency, in which all of the transactions reflected by this row are denominated (e.g., usd, cad, gbp, eur, etc.).
 
-* **Channel Name** – The name of the app that generated this row's transactions.
+* **App Name** – The name of the app that generated this row's transactions.
 
 * **Transaction Date** – The date of all transactions represented by this row.
 

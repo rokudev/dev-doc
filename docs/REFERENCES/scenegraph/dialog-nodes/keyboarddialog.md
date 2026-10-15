@@ -41,4 +41,4 @@ Another typical usage of the KeyboardDialog node class adds a "Hide Text" button
 
 ## Sample app
 
-[KeyboardDialogExample](https://github.com/rokudev/samples/tree/master/ux%20components/dialogs/KeyboardDialogExample) is a sample app demonstrating KeyboardDialog in action.
+[KeyboardDialogExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/dialogs/KeyboardDialogExample) is a sample app demonstrating KeyboardDialog in action.

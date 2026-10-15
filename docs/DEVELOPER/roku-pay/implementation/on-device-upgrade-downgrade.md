@@ -83,7 +83,7 @@ To call the [**SetOrder()** function](doc:ifchannelstore#setorderorder-as-object
    myOrderInfo.action = "Upgrade"
    ```
 
-2. Call the [**SetOrder()** function](doc:ifchannelstore#setorderorder-as-object-orderinfo-as-object-as-void) to have the customer confirm the upgrade/downgrade. The **myOrderItems** parameter specifies the in-channel product to which the customer is upgrading/downgrading; the **myOrderInfo** parameter whether the transaction is an upgrade or downgrade.
+2. Call the [**SetOrder()** function](doc:ifchannelstore#setorderorder-as-object-orderinfo-as-object-as-void) to have the customer confirm the upgrade/downgrade. The **myOrderItems** parameter specifies the in-app product to which the customer is upgrading/downgrading; the **myOrderInfo** parameter whether the transaction is an upgrade or downgrade.
 
    ```brightscript
    m.store.setOrder(myOrderItems, myOrderInfo)
@@ -474,4 +474,4 @@ The following sample demonstrates an **UpgradeSale** notification:
 
 ## Sample app
 
-The file [upgrade-downgrade-sample](https://github.com/rokudev/samples/tree/master/roku%20pay/upgrade-downgrade-sample) is a sample app that allows you to experiment with the upgrade-downgrade feature. This package file can be sideloaded directly into your Roku device. Consult the `Readme.md` file that is in the zipped package for operating instructions and other information.
+The file [upgrade-downgrade-sample](https://gitlab.com/rokudev/samples/tree/master/roku%20pay/upgrade-downgrade-sample) is a sample app that allows you to experiment with the upgrade-downgrade feature. This package file can be sideloaded directly into your Roku device. Consult the `Readme.md` file that is in the zipped package for operating instructions and other information.

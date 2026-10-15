@@ -76,11 +76,11 @@ The Roku Pay sign-in workflow typically includes the landing page, the request f
 
 ## Sample app
 
-The [On-device authentication sample](https://github.com/rokudev/on-device-authentication) shows the code you need to implement to sign up new users and handle subscription purchases using the SceneGraph ChannelStore node, Web Service API, and roRegsitrySection node.
+The [On-device authentication sample](https://gitlab.com/rokudev/on-device-authentication) shows the code you need to implement to sign up new users and handle subscription purchases using the SceneGraph ChannelStore node, Web Service API, and roRegsitrySection node.
 
 ## Video lesson
 
-You can learn how to implement Roku Pay in order to offer subscriptions in your app by watching the [Offering Subscriptions](doc:subscriptions) video lesson in Roku's [SceneGraph: Build a Channel online video course](doc:rsg).
+You can learn how to implement Roku Pay in order to offer subscriptions in your app by watching the [Offering Subscriptions](doc:subscriptions) video lesson in Roku's [SceneGraph: Build an App online video course](doc:rsg).
 
 This lesson describes how to monetize content by offering subscriptions, directly on-device, through Roku Pay. It explains how to get started with Roku Pay, including how to create an app, in-app products, and test users. It details the Roku Pay workflow from checking entitlements to completing purchases and granting access to content. It also summarizes how to integrate the Roku Pay Web Service  APIs into your backend system for validating, refunding, and canceling subscriptions.
 

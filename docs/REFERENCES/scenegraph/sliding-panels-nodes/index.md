@@ -145,7 +145,7 @@ panels will not slide until added to the panel set.
 ## Sliding panels example
 
 **Example Application:**
-[SlidingPanels](https://github.com/rokudev/samples/tree/master/ux%20components/sliding%20panels)
+[SlidingPanels](https://gitlab.com/rokudev/samples/tree/master/ux%20components/sliding%20panels)
 
 The following adds two medium panels as children of a panel set in an
 **OverhangPanelSetScene** component `init()` function, and sets up field

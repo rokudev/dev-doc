@@ -543,10 +543,10 @@ The follow sample apps can be installed on your local device for testing and rev
 
 | Sample download          | Description        |
 | :----------------------- | :----------------- |
-| [SimpleRowList](https://github.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids)            | Simple example app using the RowList node class. This sample creates a two row RowList node using an item component definition, that is, it specifies custom markup for the individual items in the row.      |
-| [RowListFocusStyleTest](https://github.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids)    | A more complex example app that demonstrates a number of different focus styles, as well as ways to mix different sized images in different RowList rows.      |
-| [AdvancedRowList](https://github.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids)          | Example demonstrating use of RowList in a PanelSet. This example includes RowList loading real data from a JSON file, mixed aspect ratio posters, and the use of focusPercent to overlay annotations.      |
-| [variableWidthRowList](https://github.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids)     | A simple example demonstrating variable width items. The first row in the RowList contains large hero artwork and each subsequent row contains a mix of different aspect ratio posters for TV and Movie artwork.      |
+| [SimpleRowList](https://gitlab.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids)            | Simple example app using the RowList node class. This sample creates a two row RowList node using an item component definition, that is, it specifies custom markup for the individual items in the row.      |
+| [RowListFocusStyleTest](https://gitlab.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids)    | A more complex example app that demonstrates a number of different focus styles, as well as ways to mix different sized images in different RowList rows.      |
+| [AdvancedRowList](https://gitlab.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids)          | Example demonstrating use of RowList in a PanelSet. This example includes RowList loading real data from a JSON file, mixed aspect ratio posters, and the use of focusPercent to overlay annotations.      |
+| [variableWidthRowList](https://gitlab.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids)     | A simple example demonstrating variable width items. The first row in the RowList contains large hero artwork and each subsequent row contains a mix of different aspect ratio posters for TV and Movie artwork.      |
 
 
 
@@ -554,4 +554,4 @@ The follow sample apps can be installed on your local device for testing and rev
 
 
 ## Sample app
-[RowListExample](https://github.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/RowListExample) is a sample app demonstrating RowList in action.
+[RowListExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/RowListExample) is a sample app demonstrating RowList in action.

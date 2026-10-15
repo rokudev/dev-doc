@@ -77,7 +77,7 @@ The following reads attributes from an XML file on a server containing the conte
 </component>
 ```
 
-In addition to this example, a much simpler, complete example, including the scene that creates the Task node, can be found here: [SimpleTask example](https://github.com/rokudev/samples/tree/master/ux%20components/control). That example simply uses a Task node to increment a counter and display the current counter value on the screen.
+In addition to this example, a much simpler, complete example, including the scene that creates the Task node, can be found here: [SimpleTask example](https://gitlab.com/rokudev/samples/tree/master/ux%20components/control). That example simply uses a Task node to increment a counter and display the current counter value on the screen.
 
 ## Fields
 
@@ -89,4 +89,4 @@ In addition to this example, a much simpler, complete example, including the sce
 
 ## Sample app
 [TaskExample](
-https://github.com/rokudev/samples/tree/master/ux%20components/control/TaskExample) is a sample app demonstrating Task in action.
+https://gitlab.com/rokudev/samples/tree/master/ux%20components/control/TaskExample) is a sample app demonstrating Task in action.

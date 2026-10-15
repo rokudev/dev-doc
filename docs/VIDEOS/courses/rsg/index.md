@@ -12,7 +12,7 @@ next:
 ---
 
 
-The **SceneGraph Developers: Build an App** course teaches novice Roku developers how to develop an app from the ground up with the Roku SDK. This course features a set of 13 video lessons and a comprehensive [sample app](https://github.com/rokudev/scenegraph-master-sample) that walks developers through each step in building a basic, high-performance Roku app that passes certification. This course is ideal for developers that are new to the Roku platform and want a simple, streamlined path for quickly understanding Roku development.
+The **SceneGraph Developers: Build an App** course teaches novice Roku developers how to develop an app from the ground up with the Roku SDK. This course features a set of 13 video lessons and a comprehensive [sample app](https://gitlab.com/rokudev/scenegraph-master-sample) that walks developers through each step in building a basic, high-performance Roku app that passes certification. This course is ideal for developers that are new to the Roku platform and want a simple, streamlined path for quickly understanding Roku development.
 
 ## Course content
 
@@ -34,7 +34,7 @@ Each video lesson is broken down into individual sections that summarize the mat
 
 The code used in these lessons has been packaged into individual apps within a master sample app that accompanies this  course. For example, the lesson explaining how to build a GridScreen has an associated GridScreen sample app that you can download, review the code implementation, and then sideload and test on your Roku device.
 
-Overall, the master sample app includes apps for building the screens in the app UI and implementing the video ads, subscriptions, and deep linking features. You can download all the apps used for this course from [Roku's GitHub project](https://github.com/rokudev/scenegraph-master-sample).
+Overall, the master sample app includes apps for building the screens in the app UI and implementing the video ads, subscriptions, and deep linking features. You can download all the apps used for this course from [Roku's GitHub project](https://gitlab.com/rokudev/scenegraph-master-sample).
 
 ## What to do after watching a video lesson
 
@@ -50,4 +50,4 @@ If you have questions while taking the course, go to the [Roku Developer Forum](
 
 ## More about the Roku master sample app
 
-Beyond providing the code associated with the lessons, the [master sample app](https://github.com/rokudev/scenegraph-master-sample) serves as a model for building a certification-compliant app. Both newer and experienced developers can use this app as a reference when building their app UI and implementing the covered features. This sample app is certification-compliant; therefore, content creators looking for a template for quickly creating and publishing a customized Roku app can use this sample app as the foundation for their project.
+Beyond providing the code associated with the lessons, the [master sample app](https://gitlab.com/rokudev/scenegraph-master-sample) serves as a model for building a certification-compliant app. Both newer and experienced developers can use this app as a reference when building their app UI and implementing the covered features. This sample app is certification-compliant; therefore, content creators looking for a template for quickly creating and publishing a customized Roku app can use this sample app as the foundation for their project.

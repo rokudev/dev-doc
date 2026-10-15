@@ -296,7 +296,7 @@ To use this test method, create a **csFake** folder and add the following XML fi
 * **csfake/PlaceOrder.xml**: Contains information about the product to be ordered.
 * **csfake/CheckOrder.xml**: Verifies the validity of the order placed. For example, if the **order** and **id** values in the PlaceOrder and CheckOrder XML files do not match, the fake server will report an error in the order processing.
 
-See the [SimpleChannelStore sample app](https://github.com/rokudev/samples/tree/master/roku%20pay/SimpleChannelStore) for how to use this testing method.
+See the [SimpleChannelStore sample app](https://gitlab.com/rokudev/samples/tree/master/roku%20pay/SimpleChannelStore) for how to use this testing method.
 
 ### GetUserData() as Object
 

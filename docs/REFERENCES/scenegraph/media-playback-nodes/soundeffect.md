@@ -20,7 +20,7 @@ For local files, the convention is to include the WAV files in a directory named
 
 For downloaded files, a least-recently-used (LRU) mechanism is used to keep the most recently downloaded/played sounds in temporary storage on the device. If the limits on the maximum number/size of downloaded sounds is exceeded, the least recently used sounds are removed from temporary storage. They will be automatically reloaded the next time the control field is set to "play".
 
-A sample demonstrating how to use the SoundEffect node can be found here: [SimpleSoundEffect](https://github.com/rokudev/samples/blob/master/media/SimpleSoundEffect)
+A sample demonstrating how to use the SoundEffect node can be found here: [SimpleSoundEffect](https://gitlab.com/rokudev/samples/blob/master/media/SimpleSoundEffect)
 
 ## Fields
 

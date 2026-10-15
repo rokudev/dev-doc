@@ -123,4 +123,4 @@ m.top.list = list
 If the list's data includes sections and the ListPanel's showSectionLabel's field is set to true, the title field of the section's ContentNode will be used as the text for the left label of the ListPanel.
 
 ## Sample app	
-[ListPanelExample](https://github.com/rokudev/samples/tree/master/ux%20components/sliding%20panels/ListPanelExample) is a sample app demonstrating ListPanel in action.
+[ListPanelExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/sliding%20panels/ListPanelExample) is a sample app demonstrating ListPanel in action.

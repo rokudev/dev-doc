@@ -524,4 +524,4 @@ This lesson details how to program your app to accept and process deep links upo
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/deep-Linking-samples) that demonstrates how to launch content with deep links. It provides content that you can use to test deep linking via ECP commands sent via cURL. It shows you how you can design your app to deep link into content when both launching an app and while the app is already running.
+You can download and install a [sample app](https://gitlab.com/rokudev/deep-Linking-samples) that demonstrates how to launch content with deep links. It provides content that you can use to test deep linking via ECP commands sent via cURL. It shows you how you can design your app to deep link into content when both launching an app and while the app is already running.

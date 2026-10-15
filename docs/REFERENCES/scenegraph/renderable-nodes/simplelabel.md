@@ -370,4 +370,4 @@ The following Fields derived from the Group base class can also be used:
 
 ## Sample app
 
-[LabelExample](https://github.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/LabelExample) is a sample app demonstrating Label in action.
+[LabelExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/screen%20elements/renderable%20nodes/LabelExample) is a sample app demonstrating Label in action.

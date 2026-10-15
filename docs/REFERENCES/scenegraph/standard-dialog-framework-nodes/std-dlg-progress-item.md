@@ -28,4 +28,4 @@ The **StdDlgProgressItem** node is used to display a spinning progress indicator
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/standard-dialog-framework) that demonstrates how to create a custom dialog that uses the progress item.
+You can download and install a [sample app](https://gitlab.com/rokudev/standard-dialog-framework) that demonstrates how to create a custom dialog that uses the progress item.

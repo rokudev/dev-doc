@@ -304,4 +304,4 @@ The section root ContentNodes use the following attributes:
 
 ## Sample app
 
-[LabelListExample](https://github.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/LabelListExample) is a sample app demonstrating LabelList in action.
+[LabelListExample](https://gitlab.com/rokudev/samples/tree/master/ux%20components/lists%20and%20grids/LabelListExample) is a sample app demonstrating LabelList in action.

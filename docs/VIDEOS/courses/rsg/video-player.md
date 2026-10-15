@@ -22,7 +22,7 @@ This lesson explains how to add the [SceneGraph Video node](doc:video) to your a
 
 | Item                                                         | Description                                                  |
 | :----------------------------------------------------------- | :----------------------------------------------------------- |
-| [Video Player sample app](https://github.com/rokudev/scenegraph-master-sample/tree/master/VideoPlayer) | Download and review the code used in this lesson to implement a Video node in a Roku app . |
+| [Video Player sample app](https://gitlab.com/rokudev/scenegraph-master-sample/tree/master/VideoPlayer) | Download and review the code used in this lesson to implement a Video node in a Roku app . |
 | [Sideloading  Roku apps](doc:developer-setup) | Sideload and test the Video Player app created in this lesson. |
 | [Video hosting](doc:how-channels-work) | View the list  content delivery networks (CDNs) and online video platforms (OVPs) that have worked with publishers to host content for their Roku apps. |
 | [Streaming spec](doc:media)                   | Understand the required file formats and encoding methods for streaming video content on Roku devices. |

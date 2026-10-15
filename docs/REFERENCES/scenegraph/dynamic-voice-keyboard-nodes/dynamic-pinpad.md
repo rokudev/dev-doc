@@ -36,4 +36,4 @@ The DynamicPinPad node inherits all its fields from its parent [DynamicKeyboardB
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/dynamic-voice-enabled-keyboards) that demonstrates how to create and configure a dynamic voice-enabled PIN pad.
+You can download and install a [sample app](https://gitlab.com/rokudev/dynamic-voice-enabled-keyboards) that demonstrates how to create and configure a dynamic voice-enabled PIN pad.

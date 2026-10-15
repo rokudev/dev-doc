@@ -48,4 +48,4 @@ Voice entry currently supports English and Spanish. The `domain` field on Dynami
 
 ## Sample app
 
-A [voice-enabled keyboard sample app](https://github.com/rokudev/dynamic-voice-enabled-keyboards) demonstrates how to create and configure each of the four keyboard variants, including a custom address keyboard built from a Key Definition File.
+A [voice-enabled keyboard sample app](https://gitlab.com/rokudev/dynamic-voice-enabled-keyboards) demonstrates how to create and configure each of the four keyboard variants, including a custom address keyboard built from a Key Definition File.

@@ -42,7 +42,7 @@ The Roku WebDriver includes a set of [APIs](doc:web-driver) that enable develope
 
 Test the [Roku WebDriver](doc:web-driver) following these steps:
 
-1. Clone the [Roku automated app testing repository](https://github.com/rokudev/automated-channel-testing) or download it as a zip file.
+1. Clone the [Roku automated app testing repository](https://gitlab.com/rokudev/automated-channel-testing) or download it as a zip file.
 
 2. Run Roku's Python-based sample WebDriver client application following these steps:
 

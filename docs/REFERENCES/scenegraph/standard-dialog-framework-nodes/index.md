@@ -231,4 +231,4 @@ m.greenPalette.colors = {DialogBackgroundColor: "0x003000FF",
 
 ## Sample app
 
-You can download and install a [sample app](https://github.com/rokudev/standard-dialog-framework) that demonstrates how to create built-in and custom dialogs with the Standard Dialog Framework. This sample app includes examples for the built-in standard keyboard, PINpad, and message dialogs, and custom dialogs featuring the standard dialog building blocks such as the keyboard, text and bullet text, and progress loaders.
+You can download and install a [sample app](https://gitlab.com/rokudev/standard-dialog-framework) that demonstrates how to create built-in and custom dialogs with the Standard Dialog Framework. This sample app includes examples for the built-in standard keyboard, PINpad, and message dialogs, and custom dialogs featuring the standard dialog building blocks such as the keyboard, text and bullet text, and progress loaders.

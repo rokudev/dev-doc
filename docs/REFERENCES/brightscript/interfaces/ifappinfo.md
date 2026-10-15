@@ -68,7 +68,7 @@ Title of the app
 
 Returns the app's developer ID, or the keyed developer ID, if the application is sideloaded.
 
-> If the device has not been keyed, this method returns "34c6fceca75e456f25e7e99531e2425c6c1de443" for sideloaded channels.
+> If the device has not been keyed, this method returns "34c6fceca75e456f25e7e99531e2425c6c1de443" for sideloaded apps.
 
 ##### Return Value
 

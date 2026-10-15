@@ -1939,7 +1939,7 @@ Each of the on-device and email renewal notifications that Roku automatically se
 
 * **App launch renewal notifications**. When the customer launches the app (via tile, Roku Search, or Roku Voice), Roku by default automatically displays a dialog once a day that gives the customer the option to update their MOP, cancel their subscription, or continue launching the app.
 
-  ![roku600px - channel-launch-notification](https://image.roku.com/ZHZscHItMTc2/channel-launch-notification.png)
+  ![roku600px - app-launch-notification](https://image.roku.com/ZHZscHItMTc2/channel-launch-notification.png)
 
 * **Email renewal notification**. Roku sends email notifications prompting the customer to update their MOP or manage their subscription online at [my.roku.com](http://my.roku.com/). The following images demonstrate the emails customers receive when Roku is trying to recover their subscriptions.
 
